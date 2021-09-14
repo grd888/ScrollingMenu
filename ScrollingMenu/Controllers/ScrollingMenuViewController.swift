@@ -50,9 +50,9 @@ extension ScrollingMenuViewController: UITableViewDataSource {
     private func cellController(for section: Section, in tableView: UITableView) -> CellController {
         switch section {
         case .grid:
-            fatalError()
+            return ScrollingMenuGridCellController()
         case .horizontal:
-            fatalError()
+            return ScrollingMenuHorizontalCellController()
         case let .single(viewModel):
             return ScrollingMenuSingleCellController(viewModel: viewModel)
         }

@@ -32,6 +32,8 @@
 		1D99539E26F0D182002D2AB5 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539D26F0D182002D2AB5 /* CellController.swift */; };
 		1D9953A026F0D746002D2AB5 /* ScrollingMenuGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539F26F0D746002D2AB5 /* ScrollingMenuGridCell.swift */; };
 		1D9953A226F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9953A126F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift */; };
+		1D9953A426F0D7E8002D2AB5 /* ScrollingMenuGridCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9953A326F0D7E8002D2AB5 /* ScrollingMenuGridCellController.swift */; };
+		1D9953A626F0D849002D2AB5 /* ScrollingMenuHorizontalCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9953A526F0D849002D2AB5 /* ScrollingMenuHorizontalCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		1D99539D26F0D182002D2AB5 /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 		1D99539F26F0D746002D2AB5 /* ScrollingMenuGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuGridCell.swift; sourceTree = "<group>"; };
 		1D9953A126F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuHorizontalCell.swift; sourceTree = "<group>"; };
+		1D9953A326F0D7E8002D2AB5 /* ScrollingMenuGridCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuGridCellController.swift; sourceTree = "<group>"; };
+		1D9953A526F0D849002D2AB5 /* ScrollingMenuHorizontalCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuHorizontalCellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 				1D99539D26F0D182002D2AB5 /* CellController.swift */,
 				1D99537426F0434E002D2AB5 /* ScrollingMenuViewController.swift */,
 				1D99539526F0CA39002D2AB5 /* ScrollingMenuSingleCellController.swift */,
+				1D9953A326F0D7E8002D2AB5 /* ScrollingMenuGridCellController.swift */,
+				1D9953A526F0D849002D2AB5 /* ScrollingMenuHorizontalCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -335,10 +341,12 @@
 				1D9953A026F0D746002D2AB5 /* ScrollingMenuGridCell.swift in Sources */,
 				1D99534326F0378B002D2AB5 /* SceneDelegate.swift in Sources */,
 				1D99537526F0434E002D2AB5 /* ScrollingMenuViewController.swift in Sources */,
+				1D9953A626F0D849002D2AB5 /* ScrollingMenuHorizontalCellController.swift in Sources */,
 				1D99538A26F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift in Sources */,
 				1D99539126F0B228002D2AB5 /* ImageDataLoaderService.swift in Sources */,
 				1D99539C26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift in Sources */,
 				1D99539A26F0CE5C002D2AB5 /* UIView+Shimmering.swift in Sources */,
+				1D9953A426F0D7E8002D2AB5 /* ScrollingMenuGridCellController.swift in Sources */,
 				1D99539426F0C869002D2AB5 /* UITableView+Dequeueing.swift in Sources */,
 				1D99539E26F0D182002D2AB5 /* CellController.swift in Sources */,
 				1D99539626F0CA39002D2AB5 /* ScrollingMenuSingleCellController.swift in Sources */,
