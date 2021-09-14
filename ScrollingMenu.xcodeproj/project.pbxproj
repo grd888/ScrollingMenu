@@ -13,7 +13,7 @@
 		1D99534826F0378B002D2AB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D99534626F0378B002D2AB5 /* Main.storyboard */; };
 		1D99534A26F0378E002D2AB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D99534926F0378E002D2AB5 /* Assets.xcassets */; };
 		1D99534D26F0378E002D2AB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D99534B26F0378E002D2AB5 /* LaunchScreen.storyboard */; };
-		1D99535826F0378F002D2AB5 /* ScrollingMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99535726F0378F002D2AB5 /* ScrollingMenuTests.swift */; };
+		1D99537126F03D63002D2AB5 /* ScrollingMenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99537026F03D63002D2AB5 /* ScrollingMenuViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,8 @@
 		1D99534C26F0378E002D2AB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D99534E26F0378E002D2AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D99535326F0378F002D2AB5 /* ScrollingMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollingMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D99535726F0378F002D2AB5 /* ScrollingMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuTests.swift; sourceTree = "<group>"; };
 		1D99535926F0378F002D2AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D99537026F03D63002D2AB5 /* ScrollingMenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +93,8 @@
 		1D99535626F0378F002D2AB5 /* ScrollingMenuTests */ = {
 			isa = PBXGroup;
 			children = (
-				1D99535726F0378F002D2AB5 /* ScrollingMenuTests.swift */,
 				1D99535926F0378F002D2AB5 /* Info.plist */,
+				1D99537026F03D63002D2AB5 /* ScrollingMenuViewModelTests.swift */,
 			);
 			path = ScrollingMenuTests;
 			sourceTree = "<group>";
@@ -151,6 +151,7 @@
 					};
 					1D99535226F0378F002D2AB5 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 						TestTargetID = 1D99533C26F0378B002D2AB5;
 					};
 				};
@@ -209,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D99535826F0378F002D2AB5 /* ScrollingMenuTests.swift in Sources */,
+				1D99537126F03D63002D2AB5 /* ScrollingMenuViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +403,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CZHT3BTCGY;
 				INFOPLIST_FILE = ScrollingMenuTests/Info.plist;
@@ -413,6 +415,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.gdelgado.ScrollingMenuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScrollingMenu.app/ScrollingMenu";
@@ -424,6 +427,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CZHT3BTCGY;
 				INFOPLIST_FILE = ScrollingMenuTests/Info.plist;
