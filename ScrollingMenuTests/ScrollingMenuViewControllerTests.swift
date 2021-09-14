@@ -11,7 +11,7 @@ import UIKit
 
 class ScrollingMenuViewControllerTests: XCTestCase {
 
-    func test_viewController_tableViewOutletShouldBeSet() {
+    func test_sut_tableViewOutletShouldBeSet() {
         let (sut, _) = makeSUT()
         
         sut.loadViewIfNeeded()
@@ -19,7 +19,7 @@ class ScrollingMenuViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.tableView)
     }
     
-    func test_viewController_tableViewDataSourceAndDelegateShouldBeSet() {
+    func test_sut_tableViewDataSourceAndDelegateShouldBeSet() {
         let (sut, _) = makeSUT()
         
         sut.loadViewIfNeeded()
@@ -34,6 +34,16 @@ class ScrollingMenuViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         
         XCTAssertEqual(sut.tableView.numberOfSections, viewModel.numberOfSections())
+    }
+    
+    func test_sut_tableShouldHaveOneRowPerSection() {
+        let (sut, _) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        
+        for section in 0 ..< sut.tableView.numberOfSections {
+            XCTAssertEqual(sut.tableView.numberOfRows(inSection: section), 1)
+        }
     }
     
     // MARK: - Helper
