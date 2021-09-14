@@ -19,6 +19,7 @@
 		1D99537926F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99537826F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift */; };
 		1D99537B26F05617002D2AB5 /* ScrollingMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */; };
 		1D99538126F091E5002D2AB5 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99538026F091E5002D2AB5 /* TestHelpers.swift */; };
+		1D99538826F096B8002D2AB5 /* ScrollingMenuSingleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99538726F096B8002D2AB5 /* ScrollingMenuSingleViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		1D99537826F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuViewModelSpy.swift; sourceTree = "<group>"; };
 		1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuViewModel.swift; sourceTree = "<group>"; };
 		1D99538026F091E5002D2AB5 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		1D99538726F096B8002D2AB5 /* ScrollingMenuSingleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuSingleViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			children = (
 				1D99537826F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift */,
 				1D99537026F03D63002D2AB5 /* ScrollingMenuViewModelTests.swift */,
+				1D99538726F096B8002D2AB5 /* ScrollingMenuSingleViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				1D99537326F040A8002D2AB5 /* ScrollingMenuViewControllerTests.swift in Sources */,
 				1D99537926F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift in Sources */,
 				1D99538126F091E5002D2AB5 /* TestHelpers.swift in Sources */,
+				1D99538826F096B8002D2AB5 /* ScrollingMenuSingleViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
