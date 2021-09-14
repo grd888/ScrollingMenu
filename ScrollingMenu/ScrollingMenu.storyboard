@@ -27,12 +27,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="345"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NlC-RV-6kL">
-                                                    <rect key="frame" x="16" y="65" width="382" height="215"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="NlC-RV-6kL" secondAttribute="height" multiplier="16:9" id="pCq-DM-L43"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9T-Te-lVE">
                                                     <rect key="frame" x="16" y="16" width="382" height="48"/>
                                                     <constraints>
@@ -42,21 +36,39 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t78-Yz-CXf">
+                                                    <rect key="frame" x="0.0" y="72" width="414" height="273"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NlC-RV-6kL">
+                                                            <rect key="frame" x="20" y="20" width="374" height="233"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="NlC-RV-6kL" secondAttribute="height" multiplier="16:9" id="pCq-DM-L43"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="NlC-RV-6kL" secondAttribute="trailing" constant="20" id="BWA-cv-4T4"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NlC-RV-6kL" secondAttribute="bottom" constant="20" id="OzN-GO-Wwr"/>
+                                                        <constraint firstItem="NlC-RV-6kL" firstAttribute="centerY" secondItem="t78-Yz-CXf" secondAttribute="centerY" id="lr4-ph-uLN"/>
+                                                        <constraint firstItem="NlC-RV-6kL" firstAttribute="leading" secondItem="t78-Yz-CXf" secondAttribute="leading" constant="20" id="xO3-pT-iZi"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="NlC-RV-6kL" secondAttribute="bottom" priority="999" constant="16" id="OfQ-2Y-RIT"/>
-                                                <constraint firstItem="NlC-RV-6kL" firstAttribute="leading" secondItem="bq4-Uy-jPH" secondAttribute="leading" constant="16" id="Qff-S5-Fwf"/>
+                                                <constraint firstItem="t78-Yz-CXf" firstAttribute="top" secondItem="z9T-Te-lVE" secondAttribute="bottom" constant="8" id="L36-43-n8h"/>
                                                 <constraint firstItem="z9T-Te-lVE" firstAttribute="leading" secondItem="bq4-Uy-jPH" secondAttribute="leading" constant="16" id="QxQ-7T-Mu2"/>
-                                                <constraint firstItem="NlC-RV-6kL" firstAttribute="centerY" secondItem="bq4-Uy-jPH" secondAttribute="centerY" id="gCf-mG-G4R"/>
+                                                <constraint firstAttribute="trailing" secondItem="t78-Yz-CXf" secondAttribute="trailing" id="dhR-KM-LuZ"/>
                                                 <constraint firstItem="z9T-Te-lVE" firstAttribute="top" secondItem="bq4-Uy-jPH" secondAttribute="top" constant="16" id="lnL-RX-il8"/>
                                                 <constraint firstAttribute="trailing" secondItem="z9T-Te-lVE" secondAttribute="trailing" constant="16" id="nIT-4g-ZL2"/>
-                                                <constraint firstAttribute="trailing" secondItem="NlC-RV-6kL" secondAttribute="trailing" constant="16" id="p1h-iu-jy2"/>
-                                                <constraint firstItem="NlC-RV-6kL" firstAttribute="top" secondItem="z9T-Te-lVE" secondAttribute="bottom" priority="999" constant="8" id="z4S-6i-RRz"/>
+                                                <constraint firstItem="t78-Yz-CXf" firstAttribute="leading" secondItem="bq4-Uy-jPH" secondAttribute="leading" id="plJ-Jq-a0U"/>
+                                                <constraint firstAttribute="bottom" secondItem="t78-Yz-CXf" secondAttribute="bottom" id="tME-rE-mKO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="bannerImageView" destination="NlC-RV-6kL" id="giO-27-SVR"/>
                                             <outlet property="headerLabel" destination="z9T-Te-lVE" id="uX0-dp-V8V"/>
+                                            <outlet property="imageContainer" destination="t78-Yz-CXf" id="l2a-xB-78P"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

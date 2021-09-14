@@ -24,6 +24,11 @@
 		1D99538C26F09874002D2AB5 /* ScrollingMenuSingleCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99538B26F09874002D2AB5 /* ScrollingMenuSingleCellTests.swift */; };
 		1D99538E26F0A971002D2AB5 /* ImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99538D26F0A970002D2AB5 /* ImageDataLoader.swift */; };
 		1D99539126F0B228002D2AB5 /* ImageDataLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539026F0B228002D2AB5 /* ImageDataLoaderService.swift */; };
+		1D99539426F0C869002D2AB5 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539326F0C869002D2AB5 /* UITableView+Dequeueing.swift */; };
+		1D99539626F0CA39002D2AB5 /* ScrollingMenuSingleCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539526F0CA39002D2AB5 /* ScrollingMenuSingleCellController.swift */; };
+		1D99539826F0CE1A002D2AB5 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539726F0CE1A002D2AB5 /* UIImageView+Animations.swift */; };
+		1D99539A26F0CE5C002D2AB5 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539926F0CE5C002D2AB5 /* UIView+Shimmering.swift */; };
+		1D99539C26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539B26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,11 @@
 		1D99538B26F09874002D2AB5 /* ScrollingMenuSingleCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuSingleCellTests.swift; sourceTree = "<group>"; };
 		1D99538D26F0A970002D2AB5 /* ImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataLoader.swift; sourceTree = "<group>"; };
 		1D99539026F0B228002D2AB5 /* ImageDataLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataLoaderService.swift; sourceTree = "<group>"; };
+		1D99539326F0C869002D2AB5 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
+		1D99539526F0CA39002D2AB5 /* ScrollingMenuSingleCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuSingleCellController.swift; sourceTree = "<group>"; };
+		1D99539726F0CE1A002D2AB5 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
+		1D99539926F0CE5C002D2AB5 /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
+		1D99539B26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuSingleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				1D99537426F0434E002D2AB5 /* ScrollingMenuViewController.swift */,
+				1D99539526F0CA39002D2AB5 /* ScrollingMenuSingleCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +158,8 @@
 		1D99537E26F08C12002D2AB5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1D99539226F0C845002D2AB5 /* Helpers */,
+				1D99539B26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +204,16 @@
 				1D99539026F0B228002D2AB5 /* ImageDataLoaderService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1D99539226F0C845002D2AB5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1D99539326F0C869002D2AB5 /* UITableView+Dequeueing.swift */,
+				1D99539726F0CE1A002D2AB5 /* UIImageView+Animations.swift */,
+				1D99539926F0CE5C002D2AB5 /* UIView+Shimmering.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,10 +321,15 @@
 				1D99538E26F0A971002D2AB5 /* ImageDataLoader.swift in Sources */,
 				1D99534126F0378B002D2AB5 /* AppDelegate.swift in Sources */,
 				1D99537B26F05617002D2AB5 /* ScrollingMenuViewModel.swift in Sources */,
+				1D99539826F0CE1A002D2AB5 /* UIImageView+Animations.swift in Sources */,
 				1D99534326F0378B002D2AB5 /* SceneDelegate.swift in Sources */,
 				1D99537526F0434E002D2AB5 /* ScrollingMenuViewController.swift in Sources */,
 				1D99538A26F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift in Sources */,
 				1D99539126F0B228002D2AB5 /* ImageDataLoaderService.swift in Sources */,
+				1D99539C26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift in Sources */,
+				1D99539A26F0CE5C002D2AB5 /* UIView+Shimmering.swift in Sources */,
+				1D99539426F0C869002D2AB5 /* UITableView+Dequeueing.swift in Sources */,
+				1D99539626F0CA39002D2AB5 /* ScrollingMenuSingleCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

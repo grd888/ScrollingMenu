@@ -21,15 +21,6 @@ class ScrollingMenuHorizontalCell: UITableViewCell {
     
 }
 
-class ScrollingMenuSingleCell: UITableViewCell {
-    @IBOutlet private(set) weak var headerLabel: UILabel!
-    @IBOutlet private(set) weak var bannerImageView: UIImageView!
-    
-    func configure(with viewModel: ScrollingMenuSingleViewModel<UIImage>) {
-        headerLabel.text = viewModel.title
-    }
-}
-
 class ScrollingMenuViewController: UIViewController {
     @IBOutlet private(set) public var tableView: UITableView!
     
