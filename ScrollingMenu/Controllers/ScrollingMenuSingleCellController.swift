@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ScrollingMenuSingleCellController {
+final class ScrollingMenuSingleCellController: CellController {
     private let viewModel: ScrollingMenuSingleViewModel<UIImage>
     private var cell: ScrollingMenuSingleCell?
     

@@ -25,7 +25,7 @@ class ScrollingMenuViewController: UIViewController {
     @IBOutlet private(set) public var tableView: UITableView!
     
     typealias Section = ScrollingMenuViewModel.SectionType
-    
+    var cellControllers = [IndexPath: CellController]()
     var viewModel: ScrollingMenuViewModel!
     
     override func viewDidLoad() {
@@ -46,20 +46,34 @@ extension ScrollingMenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let section = viewModel.section(at: indexPath.section)
-        return cellForSection(section, in: tableView)
+        let controller = cellController(for: section, in: tableView)
+        
+        return controller.view(in: tableView)
     }
     
-    private func cellForSection(_ section: Section, in tableView: UITableView) -> UITableViewCell {
+    private func cellController(for section: Section, in tableView: UITableView) -> CellController {
         switch section {
         case .grid:
-            return ScrollingMenuGridCell()
+            fatalError()
         case .horizontal:
-            return ScrollingMenuHorizontalCell()
+            fatalError()
         case let .single(viewModel):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ScrollingMenuSingleCell") as! ScrollingMenuSingleCell
-            cell.configure(with: viewModel)
-            return cell
+            return ScrollingMenuSingleCellController(viewModel: viewModel)
         }
     }
+    
+//    private func cellForSection(_ section: Section, in tableView: UITableView) -> UITableViewCell {
+//        switch section {
+//        case .grid:
+//            return ScrollingMenuGridCell()
+//        case .horizontal:
+//            return ScrollingMenuHorizontalCell()
+//        case let .single(viewModel):
+//            let controller = ScrollingMenuSingleCellController(viewModel: viewModel)
+//            return controller.view(in: tableView)
+//        }
+//    }
+    
+    
 }
 

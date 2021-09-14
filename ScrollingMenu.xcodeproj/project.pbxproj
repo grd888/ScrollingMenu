@@ -29,6 +29,7 @@
 		1D99539826F0CE1A002D2AB5 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539726F0CE1A002D2AB5 /* UIImageView+Animations.swift */; };
 		1D99539A26F0CE5C002D2AB5 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539926F0CE5C002D2AB5 /* UIView+Shimmering.swift */; };
 		1D99539C26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539B26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift */; };
+		1D99539E26F0D182002D2AB5 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539D26F0D182002D2AB5 /* CellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		1D99539726F0CE1A002D2AB5 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
 		1D99539926F0CE5C002D2AB5 /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		1D99539B26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuSingleCell.swift; sourceTree = "<group>"; };
+		1D99539D26F0D182002D2AB5 /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		1D99537C26F08BD8002D2AB5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1D99539D26F0D182002D2AB5 /* CellController.swift */,
 				1D99537426F0434E002D2AB5 /* ScrollingMenuViewController.swift */,
 				1D99539526F0CA39002D2AB5 /* ScrollingMenuSingleCellController.swift */,
 			);
@@ -329,6 +332,7 @@
 				1D99539C26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift in Sources */,
 				1D99539A26F0CE5C002D2AB5 /* UIView+Shimmering.swift in Sources */,
 				1D99539426F0C869002D2AB5 /* UITableView+Dequeueing.swift in Sources */,
+				1D99539E26F0D182002D2AB5 /* CellController.swift in Sources */,
 				1D99539626F0CA39002D2AB5 /* ScrollingMenuSingleCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
