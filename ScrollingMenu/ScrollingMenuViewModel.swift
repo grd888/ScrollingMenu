@@ -25,4 +25,8 @@ class ScrollingMenuViewModel {
     func numberOfSections() -> Int {
         return sections.count
     }
+    
+    func section(at index: Int) -> SectionType {
+        return sections[index]
+    }
 }
