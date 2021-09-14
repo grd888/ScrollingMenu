@@ -31,7 +31,7 @@ class ScrollingMenuViewControllerTests: XCTestCase {
     // MARK: - Helper
     
     func makeSUT() -> ScrollingMenuViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: ScrollingMenuViewController.self))
+        let storyboard = UIStoryboard(name: "ScrollingMenu", bundle: Bundle(for: ScrollingMenuViewController.self))
         let sut = storyboard.instantiateInitialViewController() as! ScrollingMenuViewController
         
         return sut
