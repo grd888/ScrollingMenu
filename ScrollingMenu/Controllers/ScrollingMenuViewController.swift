@@ -43,6 +43,7 @@ extension ScrollingMenuViewController: UITableViewDataSource {
         
         let section = viewModel.section(at: indexPath.section)
         let controller = cellController(for: section, in: tableView)
+        cellControllers[indexPath] = controller
         
         return controller.view(in: tableView)
     }
@@ -57,19 +58,25 @@ extension ScrollingMenuViewController: UITableViewDataSource {
             return ScrollingMenuSingleCellController(viewModel: viewModel)
         }
     }
+}
+
+extension ScrollingMenuViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cellControllers[indexPath]?.cancelLoad()
+    }
+}
+
+extension ScrollingMenuViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        indexPaths.forEach { indexPath in
+            cellControllers[indexPath]?.preload()
+        }
+    }
     
-//    private func cellForSection(_ section: Section, in tableView: UITableView) -> UITableViewCell {
-//        switch section {
-//        case .grid:
-//            return ScrollingMenuGridCell()
-//        case .horizontal:
-//            return ScrollingMenuHorizontalCell()
-//        case let .single(viewModel):
-//            let controller = ScrollingMenuSingleCellController(viewModel: viewModel)
-//            return controller.view(in: tableView)
-//        }
-//    }
-    
-    
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        indexPaths.forEach { indexPath in
+            cellControllers[indexPath]?.cancelLoad()
+        }
+    }
 }
 
