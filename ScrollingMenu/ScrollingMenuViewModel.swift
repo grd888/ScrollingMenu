@@ -8,18 +8,22 @@
 import Foundation
 
 class ScrollingMenuViewModel {
-    enum SectionType {
-        case grid
-        case horizontal
-        case single
+    enum SectionType: Equatable {
+        static func == (lhs: ScrollingMenuViewModel.SectionType, rhs: ScrollingMenuViewModel.SectionType) -> Bool {
+            return true
+        }
+        
+        case grid(ScrollingMenuGridViewModel)
+        case horizontal(ScrollingMenuHorizontalViewModel)
+        case single(ScrollingMenuSingleViewModel)
     }
     
-    var sections: [ScrollingMenuViewModel.SectionType] = [
-        .grid,
-        .horizontal,
-        .single,
-        .horizontal,
-        .single
+    var sections: [SectionType] = [
+        .grid(ScrollingMenuGridViewModel()),
+        .horizontal(ScrollingMenuHorizontalViewModel()),
+        .single(ScrollingMenuSingleViewModel()),
+        .horizontal(ScrollingMenuHorizontalViewModel()),
+        .single(ScrollingMenuSingleViewModel())
     ]
     
     func numberOfSections() -> Int {

@@ -16,11 +16,11 @@ class ScrollingMenuViewModelTests: XCTestCase {
         let sut = makeSUT()
         
         XCTAssertEqual(sut.sections, [
-            .grid,
-            .horizontal,
-            .single,
-            .horizontal,
-            .single
+            .grid(ScrollingMenuGridViewModel()),
+            .horizontal(ScrollingMenuHorizontalViewModel()),
+            .single(ScrollingMenuSingleViewModel()),
+            .horizontal(ScrollingMenuHorizontalViewModel()),
+            .single(ScrollingMenuSingleViewModel())
         ], "Sections should be in correct order and count")
     }
     

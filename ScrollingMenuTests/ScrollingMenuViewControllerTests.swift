@@ -50,9 +50,9 @@ class ScrollingMenuViewControllerTests: XCTestCase {
     func test_sut_tableShouldHaveCorrectCellTypePerSectionType() {
         let (sut, viewModel) = makeSUT()
         viewModel.sections = [
-            .grid,
-            .horizontal,
-            .single
+            .grid(ScrollingMenuGridViewModel()),
+            .horizontal(ScrollingMenuHorizontalViewModel()),
+            .single(ScrollingMenuSingleViewModel())
         ]
         
         sut.loadViewIfNeeded()

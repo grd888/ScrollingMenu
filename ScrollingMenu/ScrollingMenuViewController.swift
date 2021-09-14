@@ -7,14 +7,23 @@
 
 import UIKit
 
+struct ScrollingMenuGridViewModel {
+    
+}
 class ScrollingMenuGridCell: UITableViewCell {
     
 }
 
+struct ScrollingMenuHorizontalViewModel {
+    
+}
 class ScrollingMenuHorizontalCell: UITableViewCell {
     
 }
 
+struct ScrollingMenuSingleViewModel {
+    
+}
 class ScrollingMenuSingleCell: UITableViewCell {
     
 }
