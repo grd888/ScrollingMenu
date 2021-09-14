@@ -6,18 +6,7 @@
 //
 
 import XCTest
-
-class ScrollingMenuViewModel {
-    enum SectionType {
-        case grid
-        case horizontal
-        case single
-    }
-    
-    func numberOfSections() -> Int {
-        return 5
-    }
-}
+@testable import ScrollingMenu
 
 class ScrollingMenuViewModelTests: XCTestCase {
 
@@ -41,12 +30,3 @@ class ScrollingMenuViewModelTests: XCTestCase {
     }
 }
 
-private class ScrollingMenuViewModelSpy: ScrollingMenuViewModel {
-    let sections: [SectionType] = [
-        .grid,
-        .horizontal,
-        .single,
-        .horizontal,
-        .single
-    ]
-}

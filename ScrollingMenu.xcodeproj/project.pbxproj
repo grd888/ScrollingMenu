@@ -16,6 +16,8 @@
 		1D99537326F040A8002D2AB5 /* ScrollingMenuViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99537226F040A8002D2AB5 /* ScrollingMenuViewControllerTests.swift */; };
 		1D99537526F0434E002D2AB5 /* ScrollingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99537426F0434E002D2AB5 /* ScrollingMenuViewController.swift */; };
 		1D99537726F049CC002D2AB5 /* ScrollingMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D99537626F049CC002D2AB5 /* ScrollingMenu.storyboard */; };
+		1D99537926F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99537826F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift */; };
+		1D99537B26F05617002D2AB5 /* ScrollingMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		1D99537226F040A8002D2AB5 /* ScrollingMenuViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuViewControllerTests.swift; sourceTree = "<group>"; };
 		1D99537426F0434E002D2AB5 /* ScrollingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuViewController.swift; sourceTree = "<group>"; };
 		1D99537626F049CC002D2AB5 /* ScrollingMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollingMenu.storyboard; sourceTree = "<group>"; };
+		1D99537826F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuViewModelSpy.swift; sourceTree = "<group>"; };
+		1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 				1D99534026F0378B002D2AB5 /* AppDelegate.swift */,
 				1D99534226F0378B002D2AB5 /* SceneDelegate.swift */,
 				1D99537426F0434E002D2AB5 /* ScrollingMenuViewController.swift */,
+				1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */,
 				1D99534626F0378B002D2AB5 /* Main.storyboard */,
 				1D99537626F049CC002D2AB5 /* ScrollingMenu.storyboard */,
 				1D99534926F0378E002D2AB5 /* Assets.xcassets */,
@@ -101,6 +106,7 @@
 				1D99535926F0378F002D2AB5 /* Info.plist */,
 				1D99537026F03D63002D2AB5 /* ScrollingMenuViewModelTests.swift */,
 				1D99537226F040A8002D2AB5 /* ScrollingMenuViewControllerTests.swift */,
+				1D99537826F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift */,
 			);
 			path = ScrollingMenuTests;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D99534126F0378B002D2AB5 /* AppDelegate.swift in Sources */,
+				1D99537B26F05617002D2AB5 /* ScrollingMenuViewModel.swift in Sources */,
 				1D99534326F0378B002D2AB5 /* SceneDelegate.swift in Sources */,
 				1D99537526F0434E002D2AB5 /* ScrollingMenuViewController.swift in Sources */,
 			);
@@ -219,6 +226,7 @@
 			files = (
 				1D99537126F03D63002D2AB5 /* ScrollingMenuViewModelTests.swift in Sources */,
 				1D99537326F040A8002D2AB5 /* ScrollingMenuViewControllerTests.swift in Sources */,
+				1D99537926F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,9 +9,15 @@ import UIKit
 
 class ScrollingMenuViewController: UIViewController {
     @IBOutlet private(set) public var tableView: UITableView!
+    
+    var viewModel: ScrollingMenuViewModel!
 }
 
 extension ScrollingMenuViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.numberOfSections()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }

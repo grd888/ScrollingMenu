@@ -12,7 +12,7 @@ import UIKit
 class ScrollingMenuViewControllerTests: XCTestCase {
 
     func test_viewController_tableViewOutletShouldBeSet() {
-        let sut = makeSUT()
+        let (sut, _) = makeSUT()
         
         sut.loadViewIfNeeded()
         
@@ -20,7 +20,7 @@ class ScrollingMenuViewControllerTests: XCTestCase {
     }
     
     func test_viewController_tableViewDataSourceAndDelegateShouldBeSet() {
-        let sut = makeSUT()
+        let (sut, _) = makeSUT()
         
         sut.loadViewIfNeeded()
         
@@ -28,13 +28,23 @@ class ScrollingMenuViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.tableView.delegate)
     }
     
+    func test_sutOnViewLoad_displaysCorrectNumberOfSections() {
+        let (sut, viewModel) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        
+        XCTAssertEqual(sut.tableView.numberOfSections, viewModel.numberOfSections())
+    }
+    
     // MARK: - Helper
     
-    func makeSUT() -> ScrollingMenuViewController {
+    func makeSUT() -> (sut: ScrollingMenuViewController, viewModel: ScrollingMenuViewModelSpy) {
+        let viewModel = ScrollingMenuViewModelSpy()
         let storyboard = UIStoryboard(name: "ScrollingMenu", bundle: Bundle(for: ScrollingMenuViewController.self))
         let sut = storyboard.instantiateInitialViewController() as! ScrollingMenuViewController
+        sut.viewModel = viewModel
         
-        return sut
+        return (sut, viewModel)
     }
 
 }
