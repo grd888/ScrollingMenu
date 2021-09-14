@@ -21,9 +21,23 @@ class ScrollingMenuHorizontalCell: UITableViewCell {
     
 }
 
+protocol TitleImageData {
+    var title: String { get }
+    var imageURL: URL { get }
+}
+
 struct ScrollingMenuSingleViewModel {
-    let header: String
-    let url: URL
+    var title: String {
+        data.title
+    }
+    var url: URL {
+        data.imageURL
+    }
+    
+    private let data: TitleImageData
+    init(data: TitleImageData) {
+        self.data = data
+    }
 }
 class ScrollingMenuSingleCell: UITableViewCell {
     

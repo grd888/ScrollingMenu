@@ -18,13 +18,21 @@ class ScrollingMenuViewModel {
         case single(ScrollingMenuSingleViewModel)
     }
     
-    var sections: [SectionType] = [
+    lazy var sections: [SectionType] = [
         .grid(ScrollingMenuGridViewModel()),
         .horizontal(ScrollingMenuHorizontalViewModel()),
-        .single(ScrollingMenuSingleViewModel()),
+        .single(ScrollingMenuSingleViewModel(data: developedBy)),
         .horizontal(ScrollingMenuHorizontalViewModel()),
-        .single(ScrollingMenuSingleViewModel())
+        .single(ScrollingMenuSingleViewModel(data: managedBy))
     ]
+    
+    private var developedBy: TitleImageData
+    private var managedBy: TitleImageData
+    
+    init(developedBy: TitleImageData, managedBy: TitleImageData) {
+        self.developedBy = developedBy
+        self.managedBy = managedBy
+    }
     
     func numberOfSections() -> Int {
         return sections.count

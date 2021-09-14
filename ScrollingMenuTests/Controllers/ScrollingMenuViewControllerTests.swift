@@ -52,7 +52,7 @@ class ScrollingMenuViewControllerTests: XCTestCase {
         viewModel.sections = [
             .grid(ScrollingMenuGridViewModel()),
             .horizontal(ScrollingMenuHorizontalViewModel()),
-            .single(ScrollingMenuSingleViewModel())
+            .single(ScrollingMenuSingleViewModel(data: anyTitleImageData()))
         ]
         
         sut.loadViewIfNeeded()
@@ -65,7 +65,7 @@ class ScrollingMenuViewControllerTests: XCTestCase {
     // MARK: - Helper
     
     func makeSUT() -> (sut: ScrollingMenuViewController, viewModel: ScrollingMenuViewModelSpy) {
-        let viewModel = ScrollingMenuViewModelSpy()
+        let viewModel = ScrollingMenuViewModelSpy(developedBy: anyTitleImageData(), managedBy: anyTitleImageData())
         let storyboard = UIStoryboard(name: "ScrollingMenu", bundle: Bundle(for: ScrollingMenuViewController.self))
         let sut = storyboard.instantiateInitialViewController() as! ScrollingMenuViewController
         sut.viewModel = viewModel

@@ -18,6 +18,7 @@
 		1D99537726F049CC002D2AB5 /* ScrollingMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D99537626F049CC002D2AB5 /* ScrollingMenu.storyboard */; };
 		1D99537926F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99537826F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift */; };
 		1D99537B26F05617002D2AB5 /* ScrollingMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */; };
+		1D99538126F091E5002D2AB5 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99538026F091E5002D2AB5 /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		1D99537626F049CC002D2AB5 /* ScrollingMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollingMenu.storyboard; sourceTree = "<group>"; };
 		1D99537826F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuViewModelSpy.swift; sourceTree = "<group>"; };
 		1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuViewModel.swift; sourceTree = "<group>"; };
+		1D99538026F091E5002D2AB5 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +106,11 @@
 		1D99535626F0378F002D2AB5 /* ScrollingMenuTests */ = {
 			isa = PBXGroup;
 			children = (
+				1D99538226F093A1002D2AB5 /* Views */,
+				1D99538426F093B4002D2AB5 /* ViewModels */,
+				1D99538326F093A8002D2AB5 /* Controllers */,
+				1D99537F26F091D3002D2AB5 /* Helpers */,
 				1D99535926F0378F002D2AB5 /* Info.plist */,
-				1D99537026F03D63002D2AB5 /* ScrollingMenuViewModelTests.swift */,
-				1D99537226F040A8002D2AB5 /* ScrollingMenuViewControllerTests.swift */,
-				1D99537826F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift */,
 			);
 			path = ScrollingMenuTests;
 			sourceTree = "<group>";
@@ -133,6 +136,38 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1D99537F26F091D3002D2AB5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1D99538026F091E5002D2AB5 /* TestHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1D99538226F093A1002D2AB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D99538326F093A8002D2AB5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D99537226F040A8002D2AB5 /* ScrollingMenuViewControllerTests.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1D99538426F093B4002D2AB5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1D99537826F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift */,
+				1D99537026F03D63002D2AB5 /* ScrollingMenuViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +286,7 @@
 				1D99537126F03D63002D2AB5 /* ScrollingMenuViewModelTests.swift in Sources */,
 				1D99537326F040A8002D2AB5 /* ScrollingMenuViewControllerTests.swift in Sources */,
 				1D99537926F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift in Sources */,
+				1D99538126F091E5002D2AB5 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

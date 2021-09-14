@@ -18,9 +18,9 @@ class ScrollingMenuViewModelTests: XCTestCase {
         XCTAssertEqual(sut.sections, [
             .grid(ScrollingMenuGridViewModel()),
             .horizontal(ScrollingMenuHorizontalViewModel()),
-            .single(ScrollingMenuSingleViewModel()),
+            .single(ScrollingMenuSingleViewModel(data: anyTitleImageData())),
             .horizontal(ScrollingMenuHorizontalViewModel()),
-            .single(ScrollingMenuSingleViewModel())
+            .single(ScrollingMenuSingleViewModel(data: anyTitleImageData()))
         ], "Sections should be in correct order and count")
     }
     
@@ -40,9 +40,11 @@ class ScrollingMenuViewModelTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT() -> ScrollingMenuViewModelSpy {
-        let sut = ScrollingMenuViewModelSpy()
+    private func makeSUT() -> ScrollingMenuViewModel {
+        let sut = ScrollingMenuViewModel(developedBy: anyTitleImageData(), managedBy: anyTitleImageData())
         return sut
     }
 }
+
+
 
