@@ -33,4 +33,5 @@ class ScrollingMenuViewModel {
     func section(at index: Int) -> SectionType {
         return sections[index]
     }
+    
 }

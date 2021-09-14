@@ -87,10 +87,11 @@
 		1D99533F26F0378B002D2AB5 /* ScrollingMenu */ = {
 			isa = PBXGroup;
 			children = (
+				1D99537E26F08C12002D2AB5 /* Views */,
+				1D99537D26F08BFC002D2AB5 /* ViewModels */,
+				1D99537C26F08BD8002D2AB5 /* Controllers */,
 				1D99534026F0378B002D2AB5 /* AppDelegate.swift */,
 				1D99534226F0378B002D2AB5 /* SceneDelegate.swift */,
-				1D99537426F0434E002D2AB5 /* ScrollingMenuViewController.swift */,
-				1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */,
 				1D99534626F0378B002D2AB5 /* Main.storyboard */,
 				1D99537626F049CC002D2AB5 /* ScrollingMenu.storyboard */,
 				1D99534926F0378E002D2AB5 /* Assets.xcassets */,
@@ -109,6 +110,29 @@
 				1D99537826F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift */,
 			);
 			path = ScrollingMenuTests;
+			sourceTree = "<group>";
+		};
+		1D99537C26F08BD8002D2AB5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D99537426F0434E002D2AB5 /* ScrollingMenuViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1D99537D26F08BFC002D2AB5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1D99537E26F08C12002D2AB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

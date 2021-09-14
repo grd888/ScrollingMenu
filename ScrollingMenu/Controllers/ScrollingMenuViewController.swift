@@ -22,7 +22,8 @@ class ScrollingMenuHorizontalCell: UITableViewCell {
 }
 
 struct ScrollingMenuSingleViewModel {
-    
+    let header: String
+    let url: URL
 }
 class ScrollingMenuSingleCell: UITableViewCell {
     
