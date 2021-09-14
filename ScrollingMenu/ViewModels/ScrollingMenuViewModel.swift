@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ScrollingMenuViewModel {
     enum SectionType: Equatable {
@@ -15,15 +16,20 @@ class ScrollingMenuViewModel {
         
         case grid(ScrollingMenuGridViewModel)
         case horizontal(ScrollingMenuHorizontalViewModel)
-        case single(ScrollingMenuSingleViewModel)
+        case single(ScrollingMenuSingleViewModel<UIImage>)
     }
+    var imageLoader: ImageDataLoader = ImageDataLoaderService()
     
     lazy var sections: [SectionType] = [
         .grid(ScrollingMenuGridViewModel()),
         .horizontal(ScrollingMenuHorizontalViewModel()),
-        .single(ScrollingMenuSingleViewModel(data: developedBy)),
+        .single(ScrollingMenuSingleViewModel(data: developedBy,
+                                             imageLoader: imageLoader,
+                                             imageTransformer: UIImage.init)),
         .horizontal(ScrollingMenuHorizontalViewModel()),
-        .single(ScrollingMenuSingleViewModel(data: managedBy))
+        .single(ScrollingMenuSingleViewModel(data: managedBy,
+                                             imageLoader: imageLoader,
+                                             imageTransformer: UIImage.init))
     ]
     
     private var developedBy: TitleImageData

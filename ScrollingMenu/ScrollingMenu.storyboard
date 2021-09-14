@@ -19,6 +19,47 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8MC-d6-cWM">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScrollingMenuSingleCell" rowHeight="345" id="N6f-ks-hVe" customClass="ScrollingMenuSingleCell" customModule="ScrollingMenu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="345"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N6f-ks-hVe" id="bq4-Uy-jPH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="345"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NlC-RV-6kL">
+                                                    <rect key="frame" x="16" y="65" width="382" height="215"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="NlC-RV-6kL" secondAttribute="height" multiplier="16:9" id="pCq-DM-L43"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9T-Te-lVE">
+                                                    <rect key="frame" x="16" y="16" width="382" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="Xl2-CE-eBG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="NlC-RV-6kL" secondAttribute="bottom" priority="999" constant="16" id="OfQ-2Y-RIT"/>
+                                                <constraint firstItem="NlC-RV-6kL" firstAttribute="leading" secondItem="bq4-Uy-jPH" secondAttribute="leading" constant="16" id="Qff-S5-Fwf"/>
+                                                <constraint firstItem="z9T-Te-lVE" firstAttribute="leading" secondItem="bq4-Uy-jPH" secondAttribute="leading" constant="16" id="QxQ-7T-Mu2"/>
+                                                <constraint firstItem="NlC-RV-6kL" firstAttribute="centerY" secondItem="bq4-Uy-jPH" secondAttribute="centerY" id="gCf-mG-G4R"/>
+                                                <constraint firstItem="z9T-Te-lVE" firstAttribute="top" secondItem="bq4-Uy-jPH" secondAttribute="top" constant="16" id="lnL-RX-il8"/>
+                                                <constraint firstAttribute="trailing" secondItem="z9T-Te-lVE" secondAttribute="trailing" constant="16" id="nIT-4g-ZL2"/>
+                                                <constraint firstAttribute="trailing" secondItem="NlC-RV-6kL" secondAttribute="trailing" constant="16" id="p1h-iu-jy2"/>
+                                                <constraint firstItem="NlC-RV-6kL" firstAttribute="top" secondItem="z9T-Te-lVE" secondAttribute="bottom" priority="999" constant="8" id="z4S-6i-RRz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bannerImageView" destination="NlC-RV-6kL" id="giO-27-SVR"/>
+                                            <outlet property="headerLabel" destination="z9T-Te-lVE" id="uX0-dp-V8V"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="8nK-mc-jQ0" id="cuU-Qp-QyB"/>
                                     <outlet property="delegate" destination="8nK-mc-jQ0" id="9j8-I7-nPK"/>

@@ -52,7 +52,7 @@ class ScrollingMenuViewControllerTests: XCTestCase {
         viewModel.sections = [
             .grid(ScrollingMenuGridViewModel()),
             .horizontal(ScrollingMenuHorizontalViewModel()),
-            .single(ScrollingMenuSingleViewModel(data: anyTitleImageData()))
+            .single(ScrollingMenuSingleViewModel<UIImage>(data: anyTitleImageData(), imageLoader: imageLoader(), imageTransformer: UIImage.init))
         ]
         
         sut.loadViewIfNeeded()
@@ -60,6 +60,23 @@ class ScrollingMenuViewControllerTests: XCTestCase {
         expect(cellAtSection: 0, inSUT: sut, toBe: ScrollingMenuGridCell.self)
         expect(cellAtSection: 1, inSUT: sut, toBe: ScrollingMenuHorizontalCell.self)
         expect(cellAtSection: 2, inSUT: sut, toBe: ScrollingMenuSingleCell.self)
+    }
+    
+    func test_viewDidLoad_rendersSingleCellTitleAndURL() throws {
+        let (sut, viewModel) = makeSUT()
+        let title = "a title"
+        let url = URL(string: "http://any-url.com")!
+        let data = TitleImageDataMock(title: title, imageURL: url)
+        viewModel.sections = [
+            .single(ScrollingMenuSingleViewModel<UIImage>(data: data, imageLoader: imageLoader(), imageTransformer: UIImage.init))
+        ]
+        
+        sut.loadViewIfNeeded()
+        
+        let cell = sut.tableView(sut.tableView, cellForRowAt: indexPath(forSection: 0)) as? ScrollingMenuSingleCell
+        
+        XCTAssertEqual(cell?.headerLabel.text, title)
+            
     }
     
     // MARK: - Helper

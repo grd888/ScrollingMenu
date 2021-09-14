@@ -16,3 +16,7 @@ struct TitleImageDataMock: TitleImageData {
     var title: String
     var imageURL: URL
 }
+
+func imageLoader() -> ImageDataLoader {
+    return ImageDataLoaderService()
+}

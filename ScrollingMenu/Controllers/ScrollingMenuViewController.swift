@@ -22,7 +22,12 @@ class ScrollingMenuHorizontalCell: UITableViewCell {
 }
 
 class ScrollingMenuSingleCell: UITableViewCell {
+    @IBOutlet private(set) weak var headerLabel: UILabel!
+    @IBOutlet private(set) weak var bannerImageView: UIImageView!
     
+    func configure(with viewModel: ScrollingMenuSingleViewModel<UIImage>) {
+        headerLabel.text = viewModel.title
+    }
 }
 
 class ScrollingMenuViewController: UIViewController {
@@ -31,6 +36,11 @@ class ScrollingMenuViewController: UIViewController {
     typealias Section = ScrollingMenuViewModel.SectionType
     
     var viewModel: ScrollingMenuViewModel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }
 
 extension ScrollingMenuViewController: UITableViewDataSource {
@@ -45,17 +55,19 @@ extension ScrollingMenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let section = viewModel.section(at: indexPath.section)
-        return cellForSection(section)
+        return cellForSection(section, in: tableView)
     }
     
-    private func cellForSection(_ section: Section) -> UITableViewCell {
+    private func cellForSection(_ section: Section, in tableView: UITableView) -> UITableViewCell {
         switch section {
         case .grid:
             return ScrollingMenuGridCell()
         case .horizontal:
             return ScrollingMenuHorizontalCell()
-        case .single:
-            return ScrollingMenuSingleCell()
+        case let .single(viewModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ScrollingMenuSingleCell") as! ScrollingMenuSingleCell
+            cell.configure(with: viewModel)
+            return cell
         }
     }
 }

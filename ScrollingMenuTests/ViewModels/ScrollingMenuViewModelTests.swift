@@ -18,9 +18,9 @@ class ScrollingMenuViewModelTests: XCTestCase {
         XCTAssertEqual(sut.sections, [
             .grid(ScrollingMenuGridViewModel()),
             .horizontal(ScrollingMenuHorizontalViewModel()),
-            .single(ScrollingMenuSingleViewModel(data: anyTitleImageData())),
+            .single(ScrollingMenuSingleViewModel<UIImage>(data: anyTitleImageData(), imageLoader: imageLoader(), imageTransformer: UIImage.init)),
             .horizontal(ScrollingMenuHorizontalViewModel()),
-            .single(ScrollingMenuSingleViewModel(data: anyTitleImageData()))
+            .single(ScrollingMenuSingleViewModel<UIImage>(data: anyTitleImageData(), imageLoader: imageLoader(), imageTransformer: UIImage.init))
         ], "Sections should be in correct order and count")
     }
     

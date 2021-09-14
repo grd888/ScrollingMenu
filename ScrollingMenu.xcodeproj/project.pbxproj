@@ -21,6 +21,9 @@
 		1D99538126F091E5002D2AB5 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99538026F091E5002D2AB5 /* TestHelpers.swift */; };
 		1D99538826F096B8002D2AB5 /* ScrollingMenuSingleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99538726F096B8002D2AB5 /* ScrollingMenuSingleViewModelTests.swift */; };
 		1D99538A26F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99538926F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift */; };
+		1D99538C26F09874002D2AB5 /* ScrollingMenuSingleCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99538B26F09874002D2AB5 /* ScrollingMenuSingleCellTests.swift */; };
+		1D99538E26F0A971002D2AB5 /* ImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99538D26F0A970002D2AB5 /* ImageDataLoader.swift */; };
+		1D99539126F0B228002D2AB5 /* ImageDataLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539026F0B228002D2AB5 /* ImageDataLoaderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		1D99538026F091E5002D2AB5 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		1D99538726F096B8002D2AB5 /* ScrollingMenuSingleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuSingleViewModelTests.swift; sourceTree = "<group>"; };
 		1D99538926F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuSingleViewModel.swift; sourceTree = "<group>"; };
+		1D99538B26F09874002D2AB5 /* ScrollingMenuSingleCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuSingleCellTests.swift; sourceTree = "<group>"; };
+		1D99538D26F0A970002D2AB5 /* ImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataLoader.swift; sourceTree = "<group>"; };
+		1D99539026F0B228002D2AB5 /* ImageDataLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataLoaderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 		1D99533F26F0378B002D2AB5 /* ScrollingMenu */ = {
 			isa = PBXGroup;
 			children = (
+				1D99538F26F0B218002D2AB5 /* Services */,
 				1D99537E26F08C12002D2AB5 /* Views */,
 				1D99537D26F08BFC002D2AB5 /* ViewModels */,
 				1D99537C26F08BD8002D2AB5 /* Controllers */,
@@ -132,6 +139,7 @@
 			children = (
 				1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */,
 				1D99538926F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift */,
+				1D99538D26F0A970002D2AB5 /* ImageDataLoader.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 		1D99538226F093A1002D2AB5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1D99538B26F09874002D2AB5 /* ScrollingMenuSingleCellTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +183,14 @@
 				1D99538726F096B8002D2AB5 /* ScrollingMenuSingleViewModelTests.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1D99538F26F0B218002D2AB5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1D99539026F0B228002D2AB5 /* ImageDataLoaderService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,11 +295,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D99538E26F0A971002D2AB5 /* ImageDataLoader.swift in Sources */,
 				1D99534126F0378B002D2AB5 /* AppDelegate.swift in Sources */,
 				1D99537B26F05617002D2AB5 /* ScrollingMenuViewModel.swift in Sources */,
 				1D99534326F0378B002D2AB5 /* SceneDelegate.swift in Sources */,
 				1D99537526F0434E002D2AB5 /* ScrollingMenuViewController.swift in Sources */,
 				1D99538A26F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift in Sources */,
+				1D99539126F0B228002D2AB5 /* ImageDataLoaderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +313,7 @@
 				1D99537326F040A8002D2AB5 /* ScrollingMenuViewControllerTests.swift in Sources */,
 				1D99537926F051F4002D2AB5 /* ScrollingMenuViewModelSpy.swift in Sources */,
 				1D99538126F091E5002D2AB5 /* TestHelpers.swift in Sources */,
+				1D99538C26F09874002D2AB5 /* ScrollingMenuSingleCellTests.swift in Sources */,
 				1D99538826F096B8002D2AB5 /* ScrollingMenuSingleViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
