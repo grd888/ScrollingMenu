@@ -42,8 +42,24 @@ class ScrollingMenuViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         
         for section in 0 ..< sut.tableView.numberOfSections {
-            XCTAssertEqual(sut.tableView.numberOfRows(inSection: section), 1)
+            let rowCount = sut.tableView(sut.tableView, numberOfRowsInSection: section)
+            XCTAssertEqual(rowCount, 1, "Expected 1, got \(rowCount) instead")
         }
+    }
+    
+    func test_sut_tableShouldHaveCorrectCellTypePerSectionType() {
+        let (sut, viewModel) = makeSUT()
+        viewModel.sections = [
+            .grid,
+            .horizontal,
+            .single
+        ]
+        
+        sut.loadViewIfNeeded()
+        
+        expect(cellAtSection: 0, inSUT: sut, toBe: ScrollingMenuGridCell.self)
+        expect(cellAtSection: 1, inSUT: sut, toBe: ScrollingMenuHorizontalCell.self)
+        expect(cellAtSection: 2, inSUT: sut, toBe: ScrollingMenuSingleCell.self)
     }
     
     // MARK: - Helper
@@ -56,5 +72,17 @@ class ScrollingMenuViewControllerTests: XCTestCase {
         
         return (sut, viewModel)
     }
-
+    
+    private func indexPath(forSection section: Int) -> IndexPath {
+        return IndexPath(row: 0, section: section)
+    }
+    
+    private func expect<T>(cellAtSection section: Int,
+                           inSUT sut: ScrollingMenuViewController,
+                           toBe expectedCell: T.Type,
+                           file: StaticString = #filePath,
+                           line: UInt = #line) {
+        let cell = sut.tableView(sut.tableView, cellForRowAt: indexPath(forSection: section))
+        XCTAssertTrue(cell is T, "Expected \(T.self), got \(String(describing: cell)) instead", file: file, line: line)
+    }
 }
