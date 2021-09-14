@@ -14,18 +14,10 @@
 		1D99534A26F0378E002D2AB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D99534926F0378E002D2AB5 /* Assets.xcassets */; };
 		1D99534D26F0378E002D2AB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D99534B26F0378E002D2AB5 /* LaunchScreen.storyboard */; };
 		1D99535826F0378F002D2AB5 /* ScrollingMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99535726F0378F002D2AB5 /* ScrollingMenuTests.swift */; };
-		1D99536326F0378F002D2AB5 /* ScrollingMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99536226F0378F002D2AB5 /* ScrollingMenuUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1D99535426F0378F002D2AB5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D99533526F0378B002D2AB5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D99533C26F0378B002D2AB5;
-			remoteInfo = ScrollingMenu;
-		};
-		1D99535F26F0378F002D2AB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1D99533526F0378B002D2AB5 /* Project object */;
 			proxyType = 1;
@@ -46,9 +38,6 @@
 		1D99535326F0378F002D2AB5 /* ScrollingMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollingMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D99535726F0378F002D2AB5 /* ScrollingMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuTests.swift; sourceTree = "<group>"; };
 		1D99535926F0378F002D2AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D99535E26F0378F002D2AB5 /* ScrollingMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollingMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D99536226F0378F002D2AB5 /* ScrollingMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuUITests.swift; sourceTree = "<group>"; };
-		1D99536426F0378F002D2AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D99535B26F0378F002D2AB5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +63,6 @@
 			children = (
 				1D99533F26F0378B002D2AB5 /* ScrollingMenu */,
 				1D99535626F0378F002D2AB5 /* ScrollingMenuTests */,
-				1D99536126F0378F002D2AB5 /* ScrollingMenuUITests */,
 				1D99533E26F0378B002D2AB5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +72,6 @@
 			children = (
 				1D99533D26F0378B002D2AB5 /* ScrollingMenu.app */,
 				1D99535326F0378F002D2AB5 /* ScrollingMenuTests.xctest */,
-				1D99535E26F0378F002D2AB5 /* ScrollingMenuUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,15 +97,6 @@
 				1D99535926F0378F002D2AB5 /* Info.plist */,
 			);
 			path = ScrollingMenuTests;
-			sourceTree = "<group>";
-		};
-		1D99536126F0378F002D2AB5 /* ScrollingMenuUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1D99536226F0378F002D2AB5 /* ScrollingMenuUITests.swift */,
-				1D99536426F0378F002D2AB5 /* Info.plist */,
-			);
-			path = ScrollingMenuUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,24 +137,6 @@
 			productReference = 1D99535326F0378F002D2AB5 /* ScrollingMenuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1D99535D26F0378F002D2AB5 /* ScrollingMenuUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D99536D26F0378F002D2AB5 /* Build configuration list for PBXNativeTarget "ScrollingMenuUITests" */;
-			buildPhases = (
-				1D99535A26F0378F002D2AB5 /* Sources */,
-				1D99535B26F0378F002D2AB5 /* Frameworks */,
-				1D99535C26F0378F002D2AB5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1D99536026F0378F002D2AB5 /* PBXTargetDependency */,
-			);
-			name = ScrollingMenuUITests;
-			productName = ScrollingMenuUITests;
-			productReference = 1D99535E26F0378F002D2AB5 /* ScrollingMenuUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +150,6 @@
 						CreatedOnToolsVersion = 12.5.1;
 					};
 					1D99535226F0378F002D2AB5 = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = 1D99533C26F0378B002D2AB5;
-					};
-					1D99535D26F0378F002D2AB5 = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 1D99533C26F0378B002D2AB5;
 					};
@@ -221,7 +170,6 @@
 			targets = (
 				1D99533C26F0378B002D2AB5 /* ScrollingMenu */,
 				1D99535226F0378F002D2AB5 /* ScrollingMenuTests */,
-				1D99535D26F0378F002D2AB5 /* ScrollingMenuUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,13 +186,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1D99535126F0378F002D2AB5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D99535C26F0378F002D2AB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,14 +213,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D99535A26F0378F002D2AB5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D99536326F0378F002D2AB5 /* ScrollingMenuUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -287,11 +220,6 @@
 			isa = PBXTargetDependency;
 			target = 1D99533C26F0378B002D2AB5 /* ScrollingMenu */;
 			targetProxy = 1D99535426F0378F002D2AB5 /* PBXContainerItemProxy */;
-		};
-		1D99536026F0378F002D2AB5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1D99533C26F0378B002D2AB5 /* ScrollingMenu */;
-			targetProxy = 1D99535F26F0378F002D2AB5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -446,7 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.gdelgado.ScrollingMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +393,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.gdelgado.ScrollingMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -513,46 +441,6 @@
 			};
 			name = Release;
 		};
-		1D99536E26F0378F002D2AB5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CZHT3BTCGY;
-				INFOPLIST_FILE = ScrollingMenuUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.gdelgado.ScrollingMenuUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ScrollingMenu;
-			};
-			name = Debug;
-		};
-		1D99536F26F0378F002D2AB5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CZHT3BTCGY;
-				INFOPLIST_FILE = ScrollingMenuUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.gdelgado.ScrollingMenuUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ScrollingMenu;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,15 +467,6 @@
 			buildConfigurations = (
 				1D99536B26F0378F002D2AB5 /* Debug */,
 				1D99536C26F0378F002D2AB5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1D99536D26F0378F002D2AB5 /* Build configuration list for PBXNativeTarget "ScrollingMenuUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D99536E26F0378F002D2AB5 /* Debug */,
-				1D99536F26F0378F002D2AB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
