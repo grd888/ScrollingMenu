@@ -30,6 +30,8 @@
 		1D99539A26F0CE5C002D2AB5 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539926F0CE5C002D2AB5 /* UIView+Shimmering.swift */; };
 		1D99539C26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539B26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift */; };
 		1D99539E26F0D182002D2AB5 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539D26F0D182002D2AB5 /* CellController.swift */; };
+		1D9953A026F0D746002D2AB5 /* ScrollingMenuGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99539F26F0D746002D2AB5 /* ScrollingMenuGridCell.swift */; };
+		1D9953A226F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9953A126F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		1D99539926F0CE5C002D2AB5 /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		1D99539B26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuSingleCell.swift; sourceTree = "<group>"; };
 		1D99539D26F0D182002D2AB5 /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
+		1D99539F26F0D746002D2AB5 /* ScrollingMenuGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuGridCell.swift; sourceTree = "<group>"; };
+		1D9953A126F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuHorizontalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 			children = (
 				1D99539226F0C845002D2AB5 /* Helpers */,
 				1D99539B26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift */,
+				1D99539F26F0D746002D2AB5 /* ScrollingMenuGridCell.swift */,
+				1D9953A126F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,7 +330,9 @@
 				1D99538E26F0A971002D2AB5 /* ImageDataLoader.swift in Sources */,
 				1D99534126F0378B002D2AB5 /* AppDelegate.swift in Sources */,
 				1D99537B26F05617002D2AB5 /* ScrollingMenuViewModel.swift in Sources */,
+				1D9953A226F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift in Sources */,
 				1D99539826F0CE1A002D2AB5 /* UIImageView+Animations.swift in Sources */,
+				1D9953A026F0D746002D2AB5 /* ScrollingMenuGridCell.swift in Sources */,
 				1D99534326F0378B002D2AB5 /* SceneDelegate.swift in Sources */,
 				1D99537526F0434E002D2AB5 /* ScrollingMenuViewController.swift in Sources */,
 				1D99538A26F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift in Sources */,

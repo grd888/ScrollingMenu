@@ -10,16 +10,12 @@ import UIKit
 struct ScrollingMenuGridViewModel {
     
 }
-class ScrollingMenuGridCell: UITableViewCell {
-    
-}
+
 
 struct ScrollingMenuHorizontalViewModel {
     
 }
-class ScrollingMenuHorizontalCell: UITableViewCell {
-    
-}
+
 
 class ScrollingMenuViewController: UIViewController {
     @IBOutlet private(set) public var tableView: UITableView!
