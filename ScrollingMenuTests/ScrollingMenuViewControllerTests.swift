@@ -19,6 +19,15 @@ class ScrollingMenuViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.tableView)
     }
     
+    func test_viewController_tableViewDataSourceAndDelegateShouldBeSet() {
+        let sut = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        
+        XCTAssertNotNil(sut.tableView.dataSource)
+        XCTAssertNotNil(sut.tableView.delegate)
+    }
+    
     // MARK: - Helper
     
     func makeSUT() -> ScrollingMenuViewController {
