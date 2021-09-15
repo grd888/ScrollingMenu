@@ -19,5 +19,4 @@ class HorizontalItemCell: UICollectionViewCell {
         menuItemContainer.layer.borderColor = UIColor.lightGray.cgColor
         menuItemContainer.layer.cornerRadius = 10.0
     }
-    
 }

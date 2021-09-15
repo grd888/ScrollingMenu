@@ -53,9 +53,19 @@ extension ScrollingMenuHorizontalCell: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let bounds = collectionView.bounds
-        let side = bounds.width / 2.0
+        let width = collectionView.bounds.width
+        let SPACING: CGFloat = 10.0
+        let side = (width - SPACING) / 2
+        print("Item size: \(side)")
 
         return CGSize(width: side , height: side)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 8.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 8.0
     }
 }
