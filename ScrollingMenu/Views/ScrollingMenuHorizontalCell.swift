@@ -12,6 +12,7 @@ class ScrollingMenuHorizontalCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: ScrollingMenuHorizontalViewModel<UIImage>!
+    let SPACING: CGFloat = 10.0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -54,18 +55,12 @@ extension ScrollingMenuHorizontalCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
-        let SPACING: CGFloat = 10.0
         let side = (width - SPACING) / 2
-        print("Item size: \(side)")
 
         return CGSize(width: side , height: side)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 8.0
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8.0
+        return SPACING
     }
 }
