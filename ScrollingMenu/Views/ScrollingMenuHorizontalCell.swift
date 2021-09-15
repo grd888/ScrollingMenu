@@ -11,7 +11,51 @@ class ScrollingMenuHorizontalCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var viewModel: ScrollingMenuHorizontalViewModel<UIImage>!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
     func configure(with viewModel: ScrollingMenuHorizontalViewModel<UIImage>) {
+        self.viewModel = viewModel
         titleLabel.text = viewModel.cellTitle
+        
+        collectionView.reloadData()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        collectionView.reloadData()
+    }
+}
+
+extension ScrollingMenuHorizontalCell: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.menuItems.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HorizontalItemCell.self), for: indexPath) as! HorizontalItemCell
+        let menuItem = viewModel.menuItems[indexPath.item]
+        cell.itemTitle.text = menuItem.title
+        cell.itemImageView.image = UIImage(named: menuItem.imageName)!
+        
+        return cell
+    }
+}
+
+extension ScrollingMenuHorizontalCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let bounds = collectionView.bounds
+        let side = bounds.width / 2.0
+
+        return CGSize(width: side , height: side)
     }
 }

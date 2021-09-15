@@ -39,6 +39,7 @@
 		1DDE0D6D26F189AA004C1347 /* MenuComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D6C26F189AA004C1347 /* MenuComposer.swift */; };
 		1DDE0D6F26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D6E26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift */; };
 		1DDE0D7126F1ACEA004C1347 /* HorizontalItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D7026F1ACEA004C1347 /* HorizontalItemCell.swift */; };
+		1DDE0D7326F1B9B3004C1347 /* MenuItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D7226F1B9B3004C1347 /* MenuItemData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		1DDE0D6C26F189AA004C1347 /* MenuComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuComposer.swift; sourceTree = "<group>"; };
 		1DDE0D6E26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuHorizontalViewModel.swift; sourceTree = "<group>"; };
 		1DDE0D7026F1ACEA004C1347 /* HorizontalItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalItemCell.swift; sourceTree = "<group>"; };
+		1DDE0D7226F1B9B3004C1347 /* MenuItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				1DDE0D6726F18623004C1347 /* CompanyData.swift */,
+				1DDE0D7226F1B9B3004C1347 /* MenuItemData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				1DDE0D6D26F189AA004C1347 /* MenuComposer.swift in Sources */,
 				1D99537B26F05617002D2AB5 /* ScrollingMenuViewModel.swift in Sources */,
 				1D9953A226F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift in Sources */,
+				1DDE0D7326F1B9B3004C1347 /* MenuItemData.swift in Sources */,
 				1D99539826F0CE1A002D2AB5 /* UIImageView+Animations.swift in Sources */,
 				1D9953A026F0D746002D2AB5 /* ScrollingMenuGridCell.swift in Sources */,
 				1D99534326F0378B002D2AB5 /* SceneDelegate.swift in Sources */,

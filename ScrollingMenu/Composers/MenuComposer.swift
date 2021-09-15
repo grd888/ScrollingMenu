@@ -14,9 +14,20 @@ final class MenuComposer {
         let developedBy = CompanyData(title: "Developed By", imageURL: URL(string: "https://picsum.photos/id/1000/1600/900")!)
         let managedBy = CompanyData(title: "Managed By", imageURL: URL(string: "https://picsum.photos/id/101/1600/900")!)
         let systemItems: [TitleImageData] = [
-        
+            MenuItemData(title: "Tasks & Approvals", imageName: "tile_task-approval"),
+            MenuItemData(title: "Support", imageName: "tile_support"),
         ]
-        let viewModel = ScrollingMenuViewModel(developedBy: developedBy, managedBy: managedBy, systemItems: systemItems)
+        let aboutItems: [TitleImageData] = [
+            MenuItemData(title: "Building Information", imageName: "building_info_widget"),
+            MenuItemData(title: "Moving In", imageName: "tile_move-in"),
+            MenuItemData(title: "Moving Out", imageName: "tile_move-out"),
+            MenuItemData(title: "Spaces", imageName: "tile_space"),
+            MenuItemData(title: "Assets", imageName: "tile_asset"),
+        ]
+        let viewModel = ScrollingMenuViewModel(developedBy: developedBy,
+                                               managedBy: managedBy,
+                                               systemItems: systemItems,
+                                               aboutItems: aboutItems)
         return makeMenuController(viewModel: viewModel)
     }
     
