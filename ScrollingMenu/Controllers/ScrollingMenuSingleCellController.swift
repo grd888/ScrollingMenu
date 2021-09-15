@@ -36,11 +36,15 @@ final class ScrollingMenuSingleCellController: CellController {
         cell.headerLabel.text = viewModel.title
         
         viewModel.onImageLoad = { [weak self] image in
-            self?.cell?.bannerImageView.setImageAnimated(image)
+            DispatchQueue.main.async {
+                self?.cell?.bannerImageView.setImageAnimated(image)
+            }
         }
         
         viewModel.onImageLoadingStateChange = { [weak self] isLoading in
-            self?.cell?.imageContainer.isShimmering = isLoading
+            DispatchQueue.main.async {
+                self?.cell?.imageContainer.isShimmering = isLoading
+            }
         }
         
         return cell

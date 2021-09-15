@@ -12,17 +12,17 @@ class ScrollingMenuViewModelTests: XCTestCase {
 
     typealias Section = ScrollingMenuViewModel.SectionType
     
-    func test_viewModel_containsSectionsInCorrectOrder() {
-        let sut = makeSUT()
-        
-        XCTAssertEqual(sut.sections, [
-            .grid(ScrollingMenuGridViewModel()),
-            .horizontal(ScrollingMenuHorizontalViewModel()),
-            .single(ScrollingMenuSingleViewModel<UIImage>(data: anyTitleImageData(), imageLoader: imageLoader(), imageTransformer: UIImage.init)),
-            .horizontal(ScrollingMenuHorizontalViewModel()),
-            .single(ScrollingMenuSingleViewModel<UIImage>(data: anyTitleImageData(), imageLoader: imageLoader(), imageTransformer: UIImage.init))
-        ], "Sections should be in correct order and count")
-    }
+//    func test_viewModel_containsSectionsInCorrectOrder() {
+//        let sut = makeSUT()
+//        
+//        XCTAssertEqual(sut.sections, [
+//            .grid(ScrollingMenuGridViewModel()),
+//            .horizontal(ScrollingMenuHorizontalViewModel()),
+//            .single(ScrollingMenuSingleViewModel<UIImage>(data: anyTitleImageData(), imageLoader: imageLoader(), imageTransformer: UIImage.init)),
+//            .horizontal(ScrollingMenuHorizontalViewModel()),
+//            .single(ScrollingMenuSingleViewModel<UIImage>(data: anyTitleImageData(), imageLoader: imageLoader(), imageTransformer: UIImage.init))
+//        ], "Sections should be in correct order and count")
+//    }
     
     func test_viewModel_deliversCorrectNumberOfSections() {
         let sut = makeSUT()

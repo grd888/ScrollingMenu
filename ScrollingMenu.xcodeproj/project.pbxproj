@@ -34,6 +34,9 @@
 		1D9953A226F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9953A126F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift */; };
 		1D9953A426F0D7E8002D2AB5 /* ScrollingMenuGridCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9953A326F0D7E8002D2AB5 /* ScrollingMenuGridCellController.swift */; };
 		1D9953A626F0D849002D2AB5 /* ScrollingMenuHorizontalCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9953A526F0D849002D2AB5 /* ScrollingMenuHorizontalCellController.swift */; };
+		1DDE0D6826F18623004C1347 /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D6726F18623004C1347 /* CompanyData.swift */; };
+		1DDE0D6A26F18733004C1347 /* UIImage+RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D6926F18733004C1347 /* UIImage+RandomColor.swift */; };
+		1DDE0D6D26F189AA004C1347 /* MenuComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D6C26F189AA004C1347 /* MenuComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		1D9953A126F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuHorizontalCell.swift; sourceTree = "<group>"; };
 		1D9953A326F0D7E8002D2AB5 /* ScrollingMenuGridCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuGridCellController.swift; sourceTree = "<group>"; };
 		1D9953A526F0D849002D2AB5 /* ScrollingMenuHorizontalCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuHorizontalCellController.swift; sourceTree = "<group>"; };
+		1DDE0D6726F18623004C1347 /* CompanyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
+		1DDE0D6926F18733004C1347 /* UIImage+RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+RandomColor.swift"; sourceTree = "<group>"; };
+		1DDE0D6C26F189AA004C1347 /* MenuComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,8 @@
 		1D99533F26F0378B002D2AB5 /* ScrollingMenu */ = {
 			isa = PBXGroup;
 			children = (
+				1DDE0D6B26F1899A004C1347 /* Composers */,
+				1DDE0D6626F18615004C1347 /* Models */,
 				1D99538F26F0B218002D2AB5 /* Services */,
 				1D99537E26F08C12002D2AB5 /* Views */,
 				1D99537D26F08BFC002D2AB5 /* ViewModels */,
@@ -227,8 +235,25 @@
 				1D99539326F0C869002D2AB5 /* UITableView+Dequeueing.swift */,
 				1D99539726F0CE1A002D2AB5 /* UIImageView+Animations.swift */,
 				1D99539926F0CE5C002D2AB5 /* UIView+Shimmering.swift */,
+				1DDE0D6926F18733004C1347 /* UIImage+RandomColor.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1DDE0D6626F18615004C1347 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DDE0D6726F18623004C1347 /* CompanyData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1DDE0D6B26F1899A004C1347 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				1DDE0D6C26F189AA004C1347 /* MenuComposer.swift */,
+			);
+			path = Composers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,13 +360,16 @@
 			files = (
 				1D99538E26F0A971002D2AB5 /* ImageDataLoader.swift in Sources */,
 				1D99534126F0378B002D2AB5 /* AppDelegate.swift in Sources */,
+				1DDE0D6D26F189AA004C1347 /* MenuComposer.swift in Sources */,
 				1D99537B26F05617002D2AB5 /* ScrollingMenuViewModel.swift in Sources */,
 				1D9953A226F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift in Sources */,
 				1D99539826F0CE1A002D2AB5 /* UIImageView+Animations.swift in Sources */,
 				1D9953A026F0D746002D2AB5 /* ScrollingMenuGridCell.swift in Sources */,
 				1D99534326F0378B002D2AB5 /* SceneDelegate.swift in Sources */,
 				1D99537526F0434E002D2AB5 /* ScrollingMenuViewController.swift in Sources */,
+				1DDE0D6A26F18733004C1347 /* UIImage+RandomColor.swift in Sources */,
 				1D9953A626F0D849002D2AB5 /* ScrollingMenuHorizontalCellController.swift in Sources */,
+				1DDE0D6826F18623004C1347 /* CompanyData.swift in Sources */,
 				1D99538A26F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift in Sources */,
 				1D99539126F0B228002D2AB5 /* ImageDataLoaderService.swift in Sources */,
 				1D99539C26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift in Sources */,

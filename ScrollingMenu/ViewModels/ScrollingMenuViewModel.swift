@@ -21,12 +21,12 @@ class ScrollingMenuViewModel {
     var imageLoader: ImageDataLoader = ImageDataLoaderService()
     
     lazy var sections: [SectionType] = [
-        .grid(ScrollingMenuGridViewModel()),
-        .horizontal(ScrollingMenuHorizontalViewModel()),
+//        .grid(ScrollingMenuGridViewModel()),
+//        .horizontal(ScrollingMenuHorizontalViewModel()),
         .single(ScrollingMenuSingleViewModel(data: developedBy,
                                              imageLoader: imageLoader,
                                              imageTransformer: UIImage.init)),
-        .horizontal(ScrollingMenuHorizontalViewModel()),
+//        .horizontal(ScrollingMenuHorizontalViewModel()),
         .single(ScrollingMenuSingleViewModel(data: managedBy,
                                              imageLoader: imageLoader,
                                              imageTransformer: UIImage.init))
