@@ -8,11 +8,11 @@
 import Foundation
 @testable import ScrollingMenu
 
-func anyTitleImageData() -> TitleImageData {
+func anyTitleImageData() -> TitleImageURL {
     return TitleImageDataMock(title: "any title", imageURL: URL(string: "http://anyurl.com")!)
 }
 
-struct TitleImageDataMock: TitleImageData {
+struct TitleImageDataMock: TitleImageURL {
     var title: String
     var imageURL: URL
 }

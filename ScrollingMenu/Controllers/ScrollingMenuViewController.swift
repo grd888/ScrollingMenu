@@ -11,12 +11,6 @@ struct ScrollingMenuGridViewModel {
     
 }
 
-
-struct ScrollingMenuHorizontalViewModel {
-    
-}
-
-
 class ScrollingMenuViewController: UIViewController {
     @IBOutlet private(set) public var tableView: UITableView!
     
@@ -52,8 +46,8 @@ extension ScrollingMenuViewController: UITableViewDataSource {
         switch section {
         case .grid:
             return ScrollingMenuGridCellController()
-        case .horizontal:
-            return ScrollingMenuHorizontalCellController()
+        case let .horizontal(viewModel):
+            return ScrollingMenuHorizontalCellController(viewModel: viewModel)
         case let .single(viewModel):
             return ScrollingMenuSingleCellController(viewModel: viewModel)
         }

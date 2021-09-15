@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CompanyData: TitleImageData {
+struct CompanyData: TitleImageURL {
     private(set) var title: String
     
     private(set) var imageURL: URL

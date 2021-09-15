@@ -37,6 +37,8 @@
 		1DDE0D6826F18623004C1347 /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D6726F18623004C1347 /* CompanyData.swift */; };
 		1DDE0D6A26F18733004C1347 /* UIImage+RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D6926F18733004C1347 /* UIImage+RandomColor.swift */; };
 		1DDE0D6D26F189AA004C1347 /* MenuComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D6C26F189AA004C1347 /* MenuComposer.swift */; };
+		1DDE0D6F26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D6E26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift */; };
+		1DDE0D7126F1ACEA004C1347 /* HorizontalItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D7026F1ACEA004C1347 /* HorizontalItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		1DDE0D6726F18623004C1347 /* CompanyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
 		1DDE0D6926F18733004C1347 /* UIImage+RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+RandomColor.swift"; sourceTree = "<group>"; };
 		1DDE0D6C26F189AA004C1347 /* MenuComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuComposer.swift; sourceTree = "<group>"; };
+		1DDE0D6E26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuHorizontalViewModel.swift; sourceTree = "<group>"; };
+		1DDE0D7026F1ACEA004C1347 /* HorizontalItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 			children = (
 				1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */,
 				1D99538926F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift */,
+				1DDE0D6E26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift */,
 				1D99538D26F0A970002D2AB5 /* ImageDataLoader.swift */,
 			);
 			path = ViewModels;
@@ -183,6 +188,7 @@
 				1D99539B26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift */,
 				1D99539F26F0D746002D2AB5 /* ScrollingMenuGridCell.swift */,
 				1D9953A126F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift */,
+				1DDE0D7026F1ACEA004C1347 /* HorizontalItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,12 +374,14 @@
 				1D99534326F0378B002D2AB5 /* SceneDelegate.swift in Sources */,
 				1D99537526F0434E002D2AB5 /* ScrollingMenuViewController.swift in Sources */,
 				1DDE0D6A26F18733004C1347 /* UIImage+RandomColor.swift in Sources */,
+				1DDE0D7126F1ACEA004C1347 /* HorizontalItemCell.swift in Sources */,
 				1D9953A626F0D849002D2AB5 /* ScrollingMenuHorizontalCellController.swift in Sources */,
 				1DDE0D6826F18623004C1347 /* CompanyData.swift in Sources */,
 				1D99538A26F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift in Sources */,
 				1D99539126F0B228002D2AB5 /* ImageDataLoaderService.swift in Sources */,
 				1D99539C26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift in Sources */,
 				1D99539A26F0CE5C002D2AB5 /* UIView+Shimmering.swift in Sources */,
+				1DDE0D6F26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift in Sources */,
 				1D9953A426F0D7E8002D2AB5 /* ScrollingMenuGridCellController.swift in Sources */,
 				1D99539426F0C869002D2AB5 /* UITableView+Dequeueing.swift in Sources */,
 				1D99539E26F0D182002D2AB5 /* CellController.swift in Sources */,

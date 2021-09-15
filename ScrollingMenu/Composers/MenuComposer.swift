@@ -13,8 +13,10 @@ final class MenuComposer {
     public static func menuController() -> ScrollingMenuViewController {
         let developedBy = CompanyData(title: "Developed By", imageURL: URL(string: "https://picsum.photos/id/1000/1600/900")!)
         let managedBy = CompanyData(title: "Managed By", imageURL: URL(string: "https://picsum.photos/id/101/1600/900")!)
-       
-        let viewModel = ScrollingMenuViewModel(developedBy: developedBy, managedBy: managedBy)
+        let systemItems: [TitleImageData] = [
+        
+        ]
+        let viewModel = ScrollingMenuViewModel(developedBy: developedBy, managedBy: managedBy, systemItems: systemItems)
         return makeMenuController(viewModel: viewModel)
     }
     

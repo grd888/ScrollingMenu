@@ -8,6 +8,13 @@
 import UIKit
 
 final class ScrollingMenuHorizontalCellController: CellController {
+    private let viewModel: ScrollingMenuHorizontalViewModel<UIImage>
+    private var cell: ScrollingMenuHorizontalCell!
+    
+    init(viewModel: ScrollingMenuHorizontalViewModel<UIImage>) {
+        self.viewModel = viewModel
+    }
+    
     func cancelLoad() {
         
     }
@@ -17,6 +24,8 @@ final class ScrollingMenuHorizontalCellController: CellController {
     }
     
     func view(in tableView: UITableView) -> UITableViewCell {
-        return ScrollingMenuHorizontalCell()
+        cell = tableView.dequeueReusableCell()
+        cell.configure(with: viewModel)
+        return cell
     }
 }

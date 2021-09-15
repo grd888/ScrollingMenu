@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TitleImageData {
+protocol TitleImageURL {
     var title: String { get }
     var imageURL: URL { get }
 }
@@ -16,11 +16,15 @@ class ScrollingMenuSingleViewModel<Image> {
     typealias Observer<T> = (T) -> Void
     
     private var task: ImageDataLoaderTask?
-    private let data: TitleImageData
+    
+    private let data: TitleImageURL
     private let imageLoader: ImageDataLoader
     private let imageTransformer: (Data) -> Image?
     
-    init(data: TitleImageData, imageLoader: ImageDataLoader, imageTransformer: @escaping (Data) -> Image?) {
+    init(data: TitleImageURL,
+         imageLoader: ImageDataLoader,
+         imageTransformer: @escaping (Data) -> Image?) {
+        
         self.data = data
         self.imageLoader = imageLoader
         self.imageTransformer = imageTransformer

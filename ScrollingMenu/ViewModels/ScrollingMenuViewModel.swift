@@ -15,14 +15,14 @@ class ScrollingMenuViewModel {
         }
         
         case grid(ScrollingMenuGridViewModel)
-        case horizontal(ScrollingMenuHorizontalViewModel)
+        case horizontal(ScrollingMenuHorizontalViewModel<UIImage>)
         case single(ScrollingMenuSingleViewModel<UIImage>)
     }
     var imageLoader: ImageDataLoader = ImageDataLoaderService()
     
     lazy var sections: [SectionType] = [
 //        .grid(ScrollingMenuGridViewModel()),
-//        .horizontal(ScrollingMenuHorizontalViewModel()),
+        .horizontal(ScrollingMenuHorizontalViewModel(title: "My QA Tower", items: systemItems, imageTransformer: UIImage.init)),
         .single(ScrollingMenuSingleViewModel(data: developedBy,
                                              imageLoader: imageLoader,
                                              imageTransformer: UIImage.init)),
@@ -32,12 +32,16 @@ class ScrollingMenuViewModel {
                                              imageTransformer: UIImage.init))
     ]
     
-    private var developedBy: TitleImageData
-    private var managedBy: TitleImageData
+    private var developedBy: TitleImageURL
+    private var managedBy: TitleImageURL
+    private var systemItems: [TitleImageData]
     
-    init(developedBy: TitleImageData, managedBy: TitleImageData) {
+    init(developedBy: TitleImageURL,
+         managedBy: TitleImageURL,
+         systemItems: [TitleImageData]) {
         self.developedBy = developedBy
         self.managedBy = managedBy
+        self.systemItems = systemItems
     }
     
     func numberOfSections() -> Int {
