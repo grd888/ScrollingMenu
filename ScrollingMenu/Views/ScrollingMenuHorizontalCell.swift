@@ -26,11 +26,6 @@ class ScrollingMenuHorizontalCell: UITableViewCell {
         
         collectionView.reloadData()
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        collectionView.reloadData()
-    }
 }
 
 extension ScrollingMenuHorizontalCell: UICollectionViewDataSource {

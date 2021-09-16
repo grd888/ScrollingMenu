@@ -13,7 +13,7 @@ class ScrollingMenuSingleViewModelTests: XCTestCase {
         let title = "a title"
         let url = URL(string: "http://any-url.com")!
         
-        let titleImageData = TitleImageDataMock(title: title, imageURL: url)
+        let titleImageData = TitleImageURLMock(title: title, imageURL: url)
         let sut = ScrollingMenuSingleViewModel<UIImage>(data: titleImageData, imageLoader: imageLoader() , imageTransformer: UIImage.init)
         
         XCTAssertEqual(sut.title, title)

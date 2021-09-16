@@ -50,9 +50,9 @@ class ScrollingMenuViewControllerTests: XCTestCase {
     func test_sut_tableShouldHaveCorrectCellTypePerSectionType() {
         let (sut, viewModel) = makeSUT()
         viewModel.sections = [
-            .grid(ScrollingMenuGridViewModel()),
-            .horizontal(ScrollingMenuHorizontalViewModel()),
-            .single(ScrollingMenuSingleViewModel<UIImage>(data: anyTitleImageData(), imageLoader: imageLoader(), imageTransformer: UIImage.init))
+            .grid(ScrollingMenuGridViewModel(gridItems: [])),
+            .horizontal(ScrollingMenuHorizontalViewModel(title: "a title", items: [])),
+            .single(ScrollingMenuSingleViewModel<UIImage>(data: anyTitleImageURL(), imageLoader: imageLoader(), imageTransformer: UIImage.init))
         ]
         
         sut.loadViewIfNeeded()
@@ -66,7 +66,7 @@ class ScrollingMenuViewControllerTests: XCTestCase {
         let (sut, viewModel) = makeSUT()
         let title = "a title"
         let url = URL(string: "http://any-url.com")!
-        let data = TitleImageDataMock(title: title, imageURL: url)
+        let data = TitleImageURLMock(title: title, imageURL: url)
         viewModel.sections = [
             .single(ScrollingMenuSingleViewModel<UIImage>(data: data, imageLoader: imageLoader(), imageTransformer: UIImage.init))
         ]
@@ -82,7 +82,7 @@ class ScrollingMenuViewControllerTests: XCTestCase {
     // MARK: - Helper
     
     func makeSUT() -> (sut: ScrollingMenuViewController, viewModel: ScrollingMenuViewModelSpy) {
-        let viewModel = ScrollingMenuViewModelSpy(developedBy: anyTitleImageData(), managedBy: anyTitleImageData())
+        let viewModel = ScrollingMenuViewModelSpy(developedBy: anyTitleImageURL(), managedBy: anyTitleImageURL(), systemItems: [anyTitleImageData()], aboutItems: [anyTitleImageData()], gridItems: [anyTitleImageData()])
         let storyboard = UIStoryboard(name: "ScrollingMenu", bundle: Bundle(for: ScrollingMenuViewController.self))
         let sut = storyboard.instantiateInitialViewController() as! ScrollingMenuViewController
         sut.viewModel = viewModel

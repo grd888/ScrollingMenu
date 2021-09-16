@@ -40,6 +40,11 @@
 		1DDE0D6F26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D6E26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift */; };
 		1DDE0D7126F1ACEA004C1347 /* HorizontalItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D7026F1ACEA004C1347 /* HorizontalItemCell.swift */; };
 		1DDE0D7326F1B9B3004C1347 /* MenuItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D7226F1B9B3004C1347 /* MenuItemData.swift */; };
+		1DDE0D7726F20426004C1347 /* GridButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE0D7626F20426004C1347 /* GridButton.xib */; };
+		1DDE0D7926F20498004C1347 /* GridButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D7826F20498004C1347 /* GridButton.swift */; };
+		1DDE0D7B26F214E0004C1347 /* HasNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D7A26F214E0004C1347 /* HasNib.swift */; };
+		1DDE0D7D26F2C3E0004C1347 /* GridItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D7C26F2C3DF004C1347 /* GridItemCell.swift */; };
+		1DDE0D7F26F2C60E004C1347 /* ScrollingMenuGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE0D7E26F2C60E004C1347 /* ScrollingMenuGridViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +95,11 @@
 		1DDE0D6E26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuHorizontalViewModel.swift; sourceTree = "<group>"; };
 		1DDE0D7026F1ACEA004C1347 /* HorizontalItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalItemCell.swift; sourceTree = "<group>"; };
 		1DDE0D7226F1B9B3004C1347 /* MenuItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemData.swift; sourceTree = "<group>"; };
+		1DDE0D7626F20426004C1347 /* GridButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridButton.xib; sourceTree = "<group>"; };
+		1DDE0D7826F20498004C1347 /* GridButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridButton.swift; sourceTree = "<group>"; };
+		1DDE0D7A26F214E0004C1347 /* HasNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasNib.swift; sourceTree = "<group>"; };
+		1DDE0D7C26F2C3DF004C1347 /* GridItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemCell.swift; sourceTree = "<group>"; };
+		1DDE0D7E26F2C60E004C1347 /* ScrollingMenuGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMenuGridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +188,7 @@
 				1D99537A26F05617002D2AB5 /* ScrollingMenuViewModel.swift */,
 				1D99538926F097F4002D2AB5 /* ScrollingMenuSingleViewModel.swift */,
 				1DDE0D6E26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift */,
+				1DDE0D7E26F2C60E004C1347 /* ScrollingMenuGridViewModel.swift */,
 				1D99538D26F0A970002D2AB5 /* ImageDataLoader.swift */,
 			);
 			path = ViewModels;
@@ -191,6 +202,9 @@
 				1D99539F26F0D746002D2AB5 /* ScrollingMenuGridCell.swift */,
 				1D9953A126F0D775002D2AB5 /* ScrollingMenuHorizontalCell.swift */,
 				1DDE0D7026F1ACEA004C1347 /* HorizontalItemCell.swift */,
+				1DDE0D7C26F2C3DF004C1347 /* GridItemCell.swift */,
+				1DDE0D7626F20426004C1347 /* GridButton.xib */,
+				1DDE0D7826F20498004C1347 /* GridButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,6 +258,7 @@
 				1D99539726F0CE1A002D2AB5 /* UIImageView+Animations.swift */,
 				1D99539926F0CE5C002D2AB5 /* UIView+Shimmering.swift */,
 				1DDE0D6926F18733004C1347 /* UIImage+RandomColor.swift */,
+				1DDE0D7A26F214E0004C1347 /* HasNib.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -350,6 +365,7 @@
 				1D99537726F049CC002D2AB5 /* ScrollingMenu.storyboard in Resources */,
 				1D99534A26F0378E002D2AB5 /* Assets.xcassets in Resources */,
 				1D99534826F0378B002D2AB5 /* Main.storyboard in Resources */,
+				1DDE0D7726F20426004C1347 /* GridButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +391,7 @@
 				1DDE0D7326F1B9B3004C1347 /* MenuItemData.swift in Sources */,
 				1D99539826F0CE1A002D2AB5 /* UIImageView+Animations.swift in Sources */,
 				1D9953A026F0D746002D2AB5 /* ScrollingMenuGridCell.swift in Sources */,
+				1DDE0D7F26F2C60E004C1347 /* ScrollingMenuGridViewModel.swift in Sources */,
 				1D99534326F0378B002D2AB5 /* SceneDelegate.swift in Sources */,
 				1D99537526F0434E002D2AB5 /* ScrollingMenuViewController.swift in Sources */,
 				1DDE0D6A26F18733004C1347 /* UIImage+RandomColor.swift in Sources */,
@@ -386,8 +403,11 @@
 				1D99539C26F0CFC0002D2AB5 /* ScrollingMenuSingleCell.swift in Sources */,
 				1D99539A26F0CE5C002D2AB5 /* UIView+Shimmering.swift in Sources */,
 				1DDE0D6F26F1A460004C1347 /* ScrollingMenuHorizontalViewModel.swift in Sources */,
+				1DDE0D7B26F214E0004C1347 /* HasNib.swift in Sources */,
 				1D9953A426F0D7E8002D2AB5 /* ScrollingMenuGridCellController.swift in Sources */,
 				1D99539426F0C869002D2AB5 /* UITableView+Dequeueing.swift in Sources */,
+				1DDE0D7D26F2C3E0004C1347 /* GridItemCell.swift in Sources */,
+				1DDE0D7926F20498004C1347 /* GridButton.swift in Sources */,
 				1D99539E26F0D182002D2AB5 /* CellController.swift in Sources */,
 				1D99539626F0CA39002D2AB5 /* ScrollingMenuSingleCellController.swift in Sources */,
 			);
@@ -567,7 +587,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.gdelgado.ScrollingMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -586,7 +606,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.gdelgado.ScrollingMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

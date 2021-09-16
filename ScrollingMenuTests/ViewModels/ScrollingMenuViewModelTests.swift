@@ -14,7 +14,7 @@ class ScrollingMenuViewModelTests: XCTestCase {
     
 //    func test_viewModel_containsSectionsInCorrectOrder() {
 //        let sut = makeSUT()
-//        
+//
 //        XCTAssertEqual(sut.sections, [
 //            .grid(ScrollingMenuGridViewModel()),
 //            .horizontal(ScrollingMenuHorizontalViewModel()),
@@ -41,7 +41,7 @@ class ScrollingMenuViewModelTests: XCTestCase {
     // MARK: - Helpers
     
     private func makeSUT() -> ScrollingMenuViewModel {
-        let sut = ScrollingMenuViewModel(developedBy: anyTitleImageData(), managedBy: anyTitleImageData())
+        let sut = ScrollingMenuViewModel(developedBy: anyTitleImageURL(), managedBy: anyTitleImageURL(), systemItems: [anyTitleImageData()], aboutItems: [anyTitleImageData()], gridItems: [anyTitleImageData()])
         return sut
     }
 }

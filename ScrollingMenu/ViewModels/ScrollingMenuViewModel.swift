@@ -21,7 +21,7 @@ class ScrollingMenuViewModel {
     var imageLoader: ImageDataLoader = ImageDataLoaderService()
     
     lazy var sections: [SectionType] = [
-//        .grid(ScrollingMenuGridViewModel()),
+        .grid(ScrollingMenuGridViewModel(gridItems: gridItems)),
         .horizontal(ScrollingMenuHorizontalViewModel(title: "My QA Tower", items: systemItems)),
         .single(ScrollingMenuSingleViewModel(data: developedBy,
                                              imageLoader: imageLoader,
@@ -36,15 +36,18 @@ class ScrollingMenuViewModel {
     private var managedBy: TitleImageURL
     private var systemItems: [TitleImageData]
     private var aboutItems: [TitleImageData]
+    private var gridItems: [TitleImageData]
     
     init(developedBy: TitleImageURL,
          managedBy: TitleImageURL,
          systemItems: [TitleImageData],
-         aboutItems: [TitleImageData]) {
+         aboutItems: [TitleImageData],
+         gridItems: [TitleImageData]) {
         self.developedBy = developedBy
         self.managedBy = managedBy
         self.systemItems = systemItems
         self.aboutItems = aboutItems
+        self.gridItems = gridItems
     }
     
     func numberOfSections() -> Int {

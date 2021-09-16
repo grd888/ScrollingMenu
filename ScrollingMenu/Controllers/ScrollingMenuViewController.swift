@@ -7,10 +7,6 @@
 
 import UIKit
 
-struct ScrollingMenuGridViewModel {
-    
-}
-
 class ScrollingMenuViewController: UIViewController {
     @IBOutlet private(set) public var tableView: UITableView!
     
@@ -44,8 +40,8 @@ extension ScrollingMenuViewController: UITableViewDataSource {
     
     private func cellController(for section: Section, in tableView: UITableView) -> CellController {
         switch section {
-        case .grid:
-            return ScrollingMenuGridCellController()
+        case let .grid(viewModel):
+            return ScrollingMenuGridCellController(viewModel: viewModel)
         case let .horizontal(viewModel):
             return ScrollingMenuHorizontalCellController(viewModel: viewModel)
         case let .single(viewModel):
@@ -57,6 +53,17 @@ extension ScrollingMenuViewController: UITableViewDataSource {
 extension ScrollingMenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cellControllers[indexPath]?.cancelLoad()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let section = viewModel.section(at: indexPath.section)
+        switch section {
+        case .grid:
+            let cellController = cellController(for: section, in: tableView) as! ScrollingMenuGridCellController
+            return cellController.cellHeight(forTableWidth: tableView.bounds.width)
+        default:
+            return UITableView.automaticDimension
+        }
     }
 }
 
