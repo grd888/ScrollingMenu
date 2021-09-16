@@ -22,29 +22,29 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScrollingMenuSingleCell" id="N6f-ks-hVe" customClass="ScrollingMenuSingleCell" customModule="ScrollingMenu" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="254.33332824707031"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="261.33334350585938"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N6f-ks-hVe" id="bq4-Uy-jPH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="254.33332824707031"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="261.33334350585938"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X35-Yf-ZZG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="246.33333333333334"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="253.33333333333334"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yZv-fL-vNg">
-                                                            <rect key="frame" x="8" y="8" width="359" height="230.33333333333334"/>
+                                                            <rect key="frame" x="16" y="16" width="343" height="221.33333333333334"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9T-Te-lVE">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="20.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t78-Yz-CXf">
-                                                                    <rect key="frame" x="0.0" y="28.333333333333343" width="359" height="202"/>
+                                                                    <rect key="frame" x="0.0" y="28.333333333333343" width="343" height="193"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NlC-RV-6kL">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="202"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="193"/>
                                                                         </imageView>
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,10 +69,10 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="yZv-fL-vNg" secondAttribute="bottom" priority="999" id="1pR-E8-dod"/>
-                                                        <constraint firstItem="yZv-fL-vNg" firstAttribute="top" secondItem="X35-Yf-ZZG" secondAttribute="topMargin" priority="999" id="9DL-Ny-lzz"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="yZv-fL-vNg" secondAttribute="trailing" id="Ykr-Wk-2Bo"/>
-                                                        <constraint firstItem="yZv-fL-vNg" firstAttribute="leading" secondItem="X35-Yf-ZZG" secondAttribute="leadingMargin" id="jFo-Rl-n4U"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="yZv-fL-vNg" secondAttribute="bottom" priority="999" constant="8" id="1pR-E8-dod"/>
+                                                        <constraint firstItem="yZv-fL-vNg" firstAttribute="top" secondItem="X35-Yf-ZZG" secondAttribute="topMargin" priority="999" constant="8" id="9DL-Ny-lzz"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="yZv-fL-vNg" secondAttribute="trailing" constant="8" id="Ykr-Wk-2Bo"/>
+                                                        <constraint firstItem="yZv-fL-vNg" firstAttribute="leading" secondItem="X35-Yf-ZZG" secondAttribute="leadingMargin" constant="8" id="jFo-Rl-n4U"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -92,26 +92,26 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScrollingMenuHorizontalCell" id="Bpi-op-GpQ" customClass="ScrollingMenuHorizontalCell" customModule="ScrollingMenu" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="278.66666221618652" width="375" height="232"/>
+                                        <rect key="frame" x="0.0" y="285.66667747497559" width="375" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bpi-op-GpQ" id="Mb3-bZ-kib">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="452-IU-gbK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="224"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="q7c-z5-VY4">
-                                                            <rect key="frame" x="8" y="8" width="359" height="208"/>
+                                                            <rect key="frame" x="16" y="16" width="343" height="200"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy2-pF-Pce">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="20.666666666666668"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="20.666666666666668"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bqQ-s3-lqq">
-                                                                    <rect key="frame" x="0.0" y="28.666666666666671" width="359" height="179.33333333333331"/>
+                                                                    <rect key="frame" x="0.0" y="28.666666666666671" width="343" height="171.33333333333331"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="bqQ-s3-lqq" secondAttribute="height" multiplier="2:1" id="1jS-W8-Bof"/>
@@ -124,7 +124,7 @@
                                                                     </collectionViewFlowLayout>
                                                                     <cells>
                                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HorizontalItemCell" id="rJj-G1-YHP" customClass="HorizontalItemCell" customModule="ScrollingMenu" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="-13" width="208" height="205"/>
+                                                                            <rect key="frame" x="0.0" y="-17" width="208" height="205"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PIu-sn-sGh">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="208" height="205"/>
@@ -185,10 +185,10 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="q7c-z5-VY4" secondAttribute="trailing" id="S5s-GD-08L"/>
-                                                        <constraint firstItem="q7c-z5-VY4" firstAttribute="top" secondItem="452-IU-gbK" secondAttribute="topMargin" id="WLk-cL-Gtb"/>
-                                                        <constraint firstItem="q7c-z5-VY4" firstAttribute="leading" secondItem="452-IU-gbK" secondAttribute="leadingMargin" id="bpe-Sk-b7h"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="q7c-z5-VY4" secondAttribute="bottom" id="rEu-Ai-Fyr"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="q7c-z5-VY4" secondAttribute="trailing" constant="8" id="S5s-GD-08L"/>
+                                                        <constraint firstItem="q7c-z5-VY4" firstAttribute="top" secondItem="452-IU-gbK" secondAttribute="topMargin" constant="8" id="WLk-cL-Gtb"/>
+                                                        <constraint firstItem="q7c-z5-VY4" firstAttribute="leading" secondItem="452-IU-gbK" secondAttribute="leadingMargin" constant="8" id="bpe-Sk-b7h"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="q7c-z5-VY4" secondAttribute="bottom" constant="8" id="rEu-Ai-Fyr"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -207,7 +207,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScrollingMenuGridCell" rowHeight="238" id="Rwo-ds-X0r" customClass="ScrollingMenuGridCell" customModule="ScrollingMenu" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="510.66666221618652" width="375" height="238"/>
+                                        <rect key="frame" x="0.0" y="525.66667747497559" width="375" height="238"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rwo-ds-X0r" id="W5D-AX-uZ1">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
