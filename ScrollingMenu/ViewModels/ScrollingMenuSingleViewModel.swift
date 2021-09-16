@@ -30,6 +30,8 @@ class ScrollingMenuSingleViewModel<Image> {
         self.imageTransformer = imageTransformer
     }
     
+    var didSelect: ((TitleImageURL) -> Void)?
+    
     var title: String {
         data.title
     }
@@ -57,5 +59,10 @@ class ScrollingMenuSingleViewModel<Image> {
     func cancelImageDataLoad() {
         task?.cancel()
         task = nil
+    }
+    
+    func select() {
+        print(data)
+        didSelect?(data)
     }
 }

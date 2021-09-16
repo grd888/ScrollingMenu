@@ -65,6 +65,17 @@ extension ScrollingMenuViewController: UITableViewDelegate {
             return UITableView.automaticDimension
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        let section = viewModel.section(at: indexPath.section)
+        switch section {
+        case let .single(viewModel):
+            viewModel.select()
+        default:
+            break
+        }
+    }
 }
 
 extension ScrollingMenuViewController: UITableViewDataSourcePrefetching {

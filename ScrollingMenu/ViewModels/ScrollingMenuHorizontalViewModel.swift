@@ -18,6 +18,8 @@ class ScrollingMenuHorizontalViewModel<Image> {
     private let title: String
     private let items: [TitleImageData]
     
+    var didSelectItem: ((TitleImageData) -> Void)?
+    
     init(title: String,
          items: [TitleImageData]) {
         
@@ -31,5 +33,9 @@ class ScrollingMenuHorizontalViewModel<Image> {
     
     var menuItems: [TitleImageData] {
         return items
+    }
+    
+    func selectItem(at index: Int) {
+        didSelectItem?(items[index])
     }
 }

@@ -19,13 +19,15 @@ struct ScrollingMenuGridViewModel {
         self.gridItems = gridItems
     }
     
+    var didSelectItem: ((TitleImageData) -> Void)?
+    
     var sectionInsets: UIEdgeInsets {
         return UIEdgeInsets(top: V_INSET, left: H_INSET, bottom: V_INSET, right: H_INSET)
     }
     
     func computedCellHeight(forTableWidth totalWidth: CGFloat) -> CGFloat {
         let size = itemSize(forTotalWidth: totalWidth)
-        let rows = (CGFloat(gridItems.count) / ITEMS_PER_ROW)
+        let rows = (CGFloat(gridItems.count) / ITEMS_PER_ROW).rounded(.awayFromZero)
         return size.height * rows + 2 * V_INSET
     }
     
@@ -33,5 +35,9 @@ struct ScrollingMenuGridViewModel {
         let cellWidth = (totalWidth - 2 * H_INSET) / ITEMS_PER_ROW
         let cellHeight = cellWidth * CELL_ASPECT_RATIO
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func selectItem(at index: Int) {
+        didSelectItem?(gridItems[index])
     }
 }

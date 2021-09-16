@@ -43,6 +43,12 @@ extension ScrollingMenuHorizontalCell: UICollectionViewDataSource {
     }
 }
 
+extension ScrollingMenuHorizontalCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.selectItem(at: indexPath.item)
+    }
+}
+
 extension ScrollingMenuHorizontalCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
